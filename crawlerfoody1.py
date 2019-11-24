@@ -4,13 +4,13 @@ from selenium.webdriver.common.action_chains import ActionChains
 import time
 from hfdb import *
 browser=webdriver.Chrome()
-browser.get('https://www.foody.vn/ha-noi')
+browser.get('https://www.now.vn/ha-noi/danh-sach-dia-diem-giao-tan-noi')
 time.sleep(2)
-ele=browser.find_elements_by_xpath("//div[@id='box-delivery']//div[@class='n-listitems']//li")
-for i in ele:
-    name=i.find_element_by_xpath(".//span[@class='none-quality-text ng-binding']").text
-    address=i.find_element_by_xpath(".//div[@class='address limit-text ng-binding']").text
-    pic=i.find_element_by_xpath(".//div[1]//a[1]//img[1]").get_attribute('src')
+ele=browser.find_elements_by_xpath("//div[contains(@class,'now-list-restaurant')]/div[contains(@class,'list-restaurant')]/div[contains(@class,'item-restaurant')]")
+for v in ele:
+    name=v.find_element_by_xpath(".//div[@class='info-basic-res']").find_element_by_xpath(".//h4").text
+    address=v.find_element_by_xpath(".//div[@class='info-basic-res']").find_element_by_xpath(".//div[@class='address-res']").text
+    pic=v.find_element_by_xpath(".//a[1]//div[1]//img[1]").get_attribute('src')
     quan=''
     duong=''
     tinh=''
@@ -30,17 +30,6 @@ for i in ele:
         else:
             duong=address[i]+duong
     insert_food(name,pic,address,duong,quan,tinh)
-
-
-
-
-
-
-# ele=browser.find_elements_by_xpath("//div[@class='item-restaurant']")
-# for v in ele:
-#     name=v.find_element_by_xpath(".//h4[@class='name-res']").text
-#     address=v.find_element_by_xpath(".//div[@class='address-res']").text
-#     pic=v.find_element_by_xpath(".//a[1]//div[1]//img[1]").get_attribute('src')
-    
-
 browser.close()
+
+

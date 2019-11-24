@@ -23,8 +23,21 @@ def insert_food(name,pic,address,duong,quan,tinh):
 
 # def delete_by_id(food_id):
 #     db.foods.delete_one({'_id': ObjectId(food_id)})
-
-
 def get_all_food():
     return list(db.hatfood.find())
+def search_by_addr(tinh,quan,duong):
+    ls=[]
+    ls_food=get_all_food()
+    for i in range(len(ls_food)):
+        if ls_food[i]['tinh']==tinh and ls_food[i]['quan']==quan and ls_food[i]['duong']==duong:
+            ls.append(ls_food[i])
+    return ls
+def search_by_key(food):
+    ls=[]
+    ls_f=get_all_food()
+    for i in range(len(ls_f)):
+        if ls_f[i]['name'].find(food)!=-1:
+            ls.append(ls_f[i])
+    return ls
+
 
