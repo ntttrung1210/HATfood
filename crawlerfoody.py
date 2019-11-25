@@ -4,7 +4,7 @@ from selenium.webdriver.common.action_chains import ActionChains
 import time
 from hfdb import *
 browser=webdriver.Chrome()
-browser.get('https://www.foody.vn/ha-noi')
+browser.get('https://www.foody.vn/da-nang')
 time.sleep(2)
 ele=browser.find_elements_by_xpath("//div[@id='box-delivery']//div[@class='n-listitems']//li")
 for i in ele:
@@ -29,12 +29,8 @@ for i in ele:
             break
         else:
             duong=address[i]+duong
-    insert_food(name,pic,address,duong,quan,tinh)
-
-
-
-
-
+    if check_food(address)==1:
+      insert_food(name,pic,address,duong,quan,tinh)
 
 # ele=browser.find_elements_by_xpath("//div[@class='item-restaurant']")
 # for v in ele:

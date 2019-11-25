@@ -39,5 +39,16 @@ def search_by_key(food):
         if ls_f[i]['name'].find(food)!=-1:
             ls.append(ls_f[i])
     return ls
-
+def check_food(ad):
+    kt=0
+    ls_f=get_all_food()
+    for i in range(len(ls_f)):
+        if ls_f[i]['address']==ad:
+            kt=0
+            break
+        else:
+            kt=1
+    return kt
+# print(check_food("314 Bà Triệu, Quận Hai Bà Trưng, Hà Nội"))
+# print(get_all_food())
 

@@ -29,7 +29,8 @@ for v in ele:
             break
         else:
             duong=address[i]+duong
-    insert_food(name,pic,address,duong,quan,tinh)
+    if check_food(address)==1:
+        insert_food(name,pic,address,duong,quan,tinh)
 browser.close()
 
 
