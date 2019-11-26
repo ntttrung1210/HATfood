@@ -14,8 +14,26 @@ def insert_food(name, pic, address, duong, quan, tinh):
 
 def get_all_food():
     return list(db.hatfood.find())
+
+
 def get_trangmieng():
     return list(db.trangmieng.find())
+
+
+def get_doan():
+    return list(db.doan.find())
+
+
+def get_monlau():
+    return list(db.monlau.find())
+
+
+def get_viahe():
+    return list(db.viahe.find())
+
+
+def get_mipho():
+    return list(db.mipho.find())
 
 
 def search_by_addr(tinh, quan, duong):
@@ -46,6 +64,23 @@ def check_food(ad):
         else:
             kt = 1
     return kt
+
+
 def insert_trangmieng(name, pic, address):
     db.trangmieng.insert_one({'name': name, 'pic': pic, 'address': address})
 
+
+def insert_doan(name, pic, address):
+    db.doan.insert_one({'name': name, 'pic': pic, 'address': address})
+
+
+def insert_monlau(name, pic, address):
+    db.monlau.insert_one({'name': name, 'pic': pic, 'address': address})
+
+
+def insert_viahe(name, pic, address):
+    db.viahe.insert_one({'name': name, 'pic': pic, 'address': address})
+
+
+def insert_mipho(name, pic, address):
+    db.mipho.insert_one({'name': name, 'pic': pic, 'address': address})
