@@ -31,14 +31,10 @@
               <a href="#"><span class="fa fa-youtube-play"></span></a>
             </div>
             <div class="col-3 search-top">
-              <!-- <a href="/search/food"><span class="fa fa-search"></span></a> -->
+              <!-- <a href="#"><span class="fa fa-search"></span></a> -->
               <form action="/search" class="search-top-form" method="POST">
                 <span class="icon fa fa-search"></span>
                 <input type="text" id="s" placeholder="Tìm kiếm nhanh" name="key_word">
-                <!-- <button type="button" class="btn btn-search">
-                  <span class="icon icon-search"></span>
-                </button> -->
-              </form>
             </div>
           </div>
         </div>
@@ -92,121 +88,17 @@
     </header>
     <!-- END header -->
 
-
-
-
-
-
-    <section class="site-section pt-5">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-12">
-
-            
-            <div class="owl-carousel owl-theme home-slider">
-              <div>
-                <a href="../blog-single.html" class="a-block d-flex align-items-center height-lg" style="background-image: url('../static/images/img_1.jpg'); ">
-                  <div class="text half-to-full">
-                    <div class="post-meta">
-                      <span class="category">HATfood</span>
-                      <span class="mr-2">November 2019 </span> &bullet;
-                      <span class="ml-2"><span class="fa fa-comments"></span> 15</span>
-                    </div>
-                    <h3>Hot food</h3>
-                    <p>Good for health!</p>
-                  </div>
-                </a>
-              </div>
-              <div>
-                <a href="blog-single.html" class="a-block d-flex align-items-center height-lg" style="background-image: url('../static/images/img_2.jpg'); ">
-                  <div class="text half-to-full">
-                    <div class="post-meta">
-                      <span class="category">HATfood</span>
-                      <span class="mr-2">November 2019 </span> &bullet;
-                      <span class="ml-2"><span class="fa fa-comments"></span> 9</span>
-                    </div>
-                    <h3>Hot food</h3>
-                    <p>Good for health!</p>
-                  </div>
-                </a>
-              </div>
-              <div>
-                <a href="../templates/blog-single.html" class="a-block d-flex align-items-center height-lg" style="background-image: url('../static/images/img_3.jpg'); ">
-                  <div class="text half-to-full">
-                    <div class="post-meta">
-                      <span class="category">HATfood</span>
-                      <span class="mr-2">November 2019</span> &bullet;
-                      <span class="ml-2"><span class="fa fa-comments"></span> 7</span>
-                    </div>
-                    <h3>Hot food</h3>
-                    <p>Good for health!</p>
-                  </div>
-                </a>
-              </div>
-            </div>
-            
-
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-md-6 col-lg-4">
-            <a href="../templates/blog-single.html" class="a-block d-flex align-items-center height-md" style="background-image: url('../static/images/img_4.jpg'); ">
-              <div class="text">
-                <div class="post-meta">
-                  <span class="category">Place</span>
-                  <span class="mr-2">November 2019</span> &bullet;
-                  <span class="ml-2"><span class="fa fa-comments"></span> 3</span>
-                </div>
-                <h3>Cafe Lissom Parlour -  68A Nguyễn Hữu Huân, Quận Hoàn Kiếm, Hà Nội</h3>
-              </div>
-            </a>
-          </div>
-          <div class="col-md-6 col-lg-4">
-            <a href="../templates/blog-single.html" class="a-block d-flex align-items-center height-md" style="background-image: url('../static/images/img_5.jpg'); ">
-              <div class="text">
-                <div class="post-meta">
-                  <span class="category">Food</span>
-                  <span class="mr-2">November 2019</span> &bullet;
-                  <span class="ml-2"><span class="fa fa-comments"></span> 3</span>
-                </div>
-                <h3>Pizza - Mang theo câu chuyện của cả một nền văn hóa đầy màu sắc</h3>
-              </div>
-            </a>
-          </div>
-          <div class="col-md-6 col-lg-4">
-            <a href="../templates/blog-single.html" class="a-block d-flex align-items-center height-md" style="background-image: url('../static/images/img_6.jpg'); ">
-              <div class="text">
-                <div class="post-meta">
-                  <span class="category">Health</span>
-                  <span class="mr-2">November 2019</span> &bullet;
-                  <span class="ml-2"><span class="fa fa-comments"></span> 3</span>
-                </div>
-                <h3>100 Lời khuyên quý báu để giữ gìn sức khỏe - Ai cũng phải nên ghi nhớ</h3>
-              </div>
-            </a>
-          </div>
-        </div>
-      </div>
-
-
-    </section>
-    <!-- END section -->
-
-
-
-
-
     <section class="site-section py-sm">
       <div class="container">
         <div class="row">
           <div class="col-md-6">
-            <h2 class="mb-4">Những món ăn hot tuần này</h2>
+            <h2 class="mb-4">Danh sach</h2>
           </div>
         </div>
         <div class="row blog-entries">
           <div class="col-md-12 col-lg-8 main-content">
             <div class="row">
-            {% for v in range(18) %}
+            {% for v in range(b) %}
               <div class="col-md-6">
                 <a href="../templates/blog-single.html" class="blog-entry element-animate" data-animate-effect="fadeIn">
                   <img src={{data[v].pic}} alt="Image placeholder">
@@ -297,7 +189,7 @@
             <div class="sidebar-box">
               <h3 class="heading">Tags</h3>
               <ul class="tags">
-                <li><a href="/trangmieng">Tráng miệng</a> </a></li>
+                <li><a href="#">Tráng miệng</a> </a></li>
                 <li><a href="#">Đồ ăn </a></li>
                 <li><a href="#">Món lẩu</a></li>
                 <li><a href="#">Vỉa hè</a></li>
