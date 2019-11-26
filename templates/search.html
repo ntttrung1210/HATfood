@@ -32,10 +32,9 @@
             </div>
             <div class="col-3 search-top">
               <!-- <a href="#"><span class="fa fa-search"></span></a> -->
-              <form action="#" class="search-top-form">
+              <form action="/search" class="search-top-form" method="POST">
                 <span class="icon fa fa-search"></span>
-                <input type="text" id="s" placeholder="Tìm kiếm nhanh">
-              </form>
+                <input type="text" id="s" placeholder="Tìm kiếm nhanh" name="key_word">
             </div>
           </div>
         </div>
@@ -93,13 +92,13 @@
       <div class="container">
         <div class="row">
           <div class="col-md-6">
-            <h2 class="mb-4">Tráng miệng</h2>
+            <h2 class="mb-4">Danh sach</h2>
           </div>
         </div>
         <div class="row blog-entries">
           <div class="col-md-12 col-lg-8 main-content">
             <div class="row">
-            {% for v in range(18) %}
+            {% for v in range(b) %}
               <div class="col-md-6">
                 <a href="../templates/blog-single.html" class="blog-entry element-animate" data-animate-effect="fadeIn">
                   <img src={{data[v].pic}} alt="Image placeholder">

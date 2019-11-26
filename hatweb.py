@@ -11,9 +11,12 @@ def main_page():
 def trangmieng():
     return render_template('trangmieng.html',data=get_trangmieng())
   
-# @app.route('/search/food')
-# def func_name(foo):
-#     return render_template('expression')
+@app.route('/search',methods=['POST'])
+def search():
+    key_word=request.form.get("key_word")
+    ls=search_by_key(key_word)
+    a=len(ls)
+    return render_template('search.html',data=ls,b=a)
 
 
 if __name__ == '__main__':
