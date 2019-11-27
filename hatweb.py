@@ -5,12 +5,14 @@ app = Flask(__name__)
 
 @app.route('/')
 def main_page():
-    return render_template('index.html', data=get_all_food())
+    b=len(get_all_food())
+    return render_template('index.html', data=get_all_food(),a=b)
 
 
 @app.route('/trangmieng')
 def trangmieng():
-    return render_template('doan.html', data=get_trangmieng())
+    b=len(get_trangmieng())
+    return render_template('doan.html', data=get_trangmieng(),a=b)
 
 
 @app.route('/search', methods=['POST'])
@@ -23,22 +25,26 @@ def search():
 
 @app.route('/doan')
 def doan():
-    return render_template('doan.html', data=get_doan())
+    b=len(get_doan())
+    return render_template('doan.html', data=get_doan(),a=b)
 
 
 @app.route('/monlau')
 def monlau():
-    return render_template('doan.html', data=get_monlau())
+    b=len(get_monlau())
+    return render_template('doan.html', data=get_monlau(),a=b)
 
 
 @app.route('/viahe')
 def viahe():
-    return render_template('doan.html', data=get_viahe())
+    b=len(get_viahe())
+    return render_template('doan.html', data=get_viahe(),a=b)
 
 
 @app.route('/mipho')
 def mipho():
-    return render_template('doan.html', data=get_mipho())
+    b=len(get_mipho())
+    return render_template('doan.html', data=get_mipho(),a=b)
 
 
 if __name__ == '__main__':
