@@ -47,6 +47,10 @@ def get_monlau():
     return list(db.monlau.find())
 
 
+def get_hot():
+    return list(db.hot.find())
+
+
 def get_viahe():
     return list(db.viahe.find())
 
@@ -117,4 +121,7 @@ def insert_trua(name, pic, address):
 
 def insert_toi(name, pic, address):
     db.toi.insert_one({'name': name, 'pic': pic, 'address': address})
+
+def insert_hot(name, pic, address):
+    db.hot.insert_one({'name': name, 'pic': pic, 'address': address})
 

@@ -28,6 +28,11 @@ def doan():
     b=len(get_doan())
     return render_template('doan.html', data=get_doan(),a=b,data_doc=get_all_doc())
 
+@app.route('/hot')
+def hot():
+    b=len(get_hot())
+    return render_template('doan.html', data=get_hot(),a=b,data_doc=get_all_doc())
+
 
 @app.route('/monlau')
 def monlau():
@@ -64,15 +69,15 @@ def mipho():
 
 @app.route('/post1')
 def post1():
-    return render_template('doc.html',data=get_all_content()[1])
+    return render_template('doc.html',data=get_all_content()[1],data_doc=get_all_doc())
 
 @app.route('/post2')
 def post2():
-    return render_template('doc.html',data=get_all_content()[2])
+    return render_template('doc.html',data=get_all_content()[2],data_doc=get_all_doc())
 
 @app.route('/post3')
 def post3():
-    return render_template('doc.html',data=get_all_content()[3])
+    return render_template('doc.html',data=get_all_content()[3],data_doc=get_all_doc())
 
 if __name__ == '__main__':
     app.run(host='127.0.0.1', port=8000, debug=True)
