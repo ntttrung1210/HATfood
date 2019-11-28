@@ -11,13 +11,32 @@ def insert_food(name, pic, address, duong, quan, tinh):
     db.hatfood.insert_one({'name': name, 'pic': pic, 'address': address,
                            'duong': duong, 'quan': quan, 'tinh': tinh})
 
+def insert_doc(name,pic,link):
+    db.document.insert_one({'name':name,'pic':pic,'link':link})
+
+def insert_content(content):
+    db.content.insert_one({'content':content})
+
+def get_all_content():
+    return list(db.content.find())
 
 def get_all_food():
     return list(db.hatfood.find())
 
+def get_all_doc():
+    return list(db.document.find())
 
 def get_trangmieng():
     return list(db.trangmieng.find())
+
+def get_sang():
+    return list(db.sang.find())
+
+def get_trua():
+    return list(db.trua.find())
+
+def get_toi():
+    return list(db.toi.find())
 
 
 def get_doan():
@@ -84,3 +103,18 @@ def insert_viahe(name, pic, address):
 
 def insert_mipho(name, pic, address):
     db.mipho.insert_one({'name': name, 'pic': pic, 'address': address})
+
+
+def insert_sang(name, pic, address):
+    db.sang.insert_one({'name': name, 'pic': pic, 'address': address})
+
+
+
+def insert_trua(name, pic, address):
+    db.trua.insert_one({'name': name, 'pic': pic, 'address': address})
+
+
+
+def insert_toi(name, pic, address):
+    db.toi.insert_one({'name': name, 'pic': pic, 'address': address})
+

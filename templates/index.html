@@ -48,7 +48,7 @@
         <div class="row pt-5">
           <div class="col-12 text-center">
             <a class="absolute-toggle d-block d-md-none" data-toggle="collapse" href="#navbarMenu" role="button" aria-expanded="false" aria-controls="navbarMenu"><span class="burger-lines"></span></a>
-            <h1 class="site-logo"><a href="../templates/index.html">HATfood</a></h1>
+            <h1 class="site-logo"><a href="/">HATfood</a></h1>
           </div>
         </div>
       </div>
@@ -67,9 +67,9 @@
               <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="../templates/category.html" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Tìm theo loại món</a>
                 <div class="dropdown-menu" aria-labelledby="dropdown01">
-                  <a class="dropdown-item" href="../templates/category.html">Bữa sáng</a>
-                  <a class="dropdown-item" href="../templates/category.html">Bữa trưa</a>
-                  <a class="dropdown-item" href="../templates/category.html">Bữa tối</a>
+                  <a class="dropdown-item" href="/sang">Bữa sáng</a>
+                  <a class="dropdown-item" href="/trưa">Bữa trưa</a>
+                  <a class="dropdown-item" href="/toi">Bữa tối</a>
                   
                 </div>
 
@@ -247,22 +247,52 @@
               </div>
         
               <div class="col-md-12">
-
                 <div class="post-entry-horzontal">
-                  <a href="../templates/blog-single.html">
-                    <div class="image element-animate"  data-animate-effect="fadeIn" style="background-image: url(images/person_1.jpg);"></div>
+                  <a href="/post1">
+                    <div class="image element-animate"  data-animate-effect="fadeIn" style="background-image: url({{data_doc[1].pic}});"></div>
                     <span class="text">
                       <div class="post-meta">
                         <span class="category">......</span>
                         <span class="mr-2">2019</span> &bullet;
                         <span class="ml-2"><span class="fa fa-comments"></span> 6767</span>
                       </div>
-                      <h2>HATfood----HATfood</h2>
+                      <h2>{{data_doc[1].name}}</h2>
                     </span>
                   </a>
                 </div>
-                <!-- END post -->
 
+                <div class="col-md-12">
+                  <div class="post-entry-horzontal">
+                    <a href="/post2">
+                      <div class="image element-animate"  data-animate-effect="fadeIn" style="background-image: url({{data_doc[2].pic}});"></div>
+                      <span class="text">
+                        <div class="post-meta">
+                          <span class="category">......</span>
+                          <span class="mr-2">2019</span> &bullet;
+                          <span class="ml-2"><span class="fa fa-comments"></span> 6767</span>
+                        </div>
+                        <h2>{{data_doc[2].name}}</h2>
+                      </span>
+                    </a>
+                  </div>
+
+                  <div class="col-md-12">
+                    <div class="post-entry-horzontal">
+                      <a href="/post3">
+                        <div class="image element-animate"  data-animate-effect="fadeIn" style="background-image: url({{data_doc[3].pic}});"></div>
+                        <span class="text">
+                          <div class="post-meta">
+                            <span class="category">......</span>
+                            <span class="mr-2">2019</span> &bullet;
+                            <span class="ml-2"><span class="fa fa-comments"></span> 6767</span>
+                          </div>
+                          <h2>{{data_doc[3].name}}</h2>
+                        </span>
+                      </a>
+                    </div>
+              
+                <!-- END post -->
+              
               </div>
             </div>
           </div>

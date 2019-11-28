@@ -101,106 +101,15 @@
       <div class="container">
         <div class="row">
           <div class="col-md-6">
-            <h2 class="mb-4">Danh sách</h2>
+            <h2 class="mb-4"></h2>
           </div>
         </div>
         <div class="row blog-entries">
           <div class="main-content">
-            <div class="row">
-            {% for v in range(a) %}
-              <div class="col-md-4">
-                <a href="../templates/blog-single.html" class="blog-entry element-animate" data-animate-effect="fadeIn">
-                  <img src={{data[v].pic}} alt="Image placeholder">
-                  <div class="blog-content-body">
-                    <div class="post-meta">
-                      <span class="category">Food</span>
-                      <span class="mr-2">November 2019</span> &bullet;
-                      <span class="ml-2"><span class="fa fa-comments"></span> 3</span>
-                    </div>
-                    <h2>{{data[v].name}}</h2>
-                    <h4>{{data[v].address}}</h4>
-                  </div>
-                </a>
-              </div>
-            {%endfor%}
-              
+            <h1>{{data.content}}</h1>
             </div>
 
-            <div class="row">
-              <div class="col-md-12 text-center">
-                <nav aria-label="Page navigation" class="text-center">
-                  <ul class="pagination">
-                    <li class="page-item  active"><a class="page-link" href="#">Prev</a></li>
-                    <li class="page-item"><a class="page-link" href="#">1</a></li>
-                    <li class="page-item"><a class="page-link" href="#">2</a></li>
-                    <li class="page-item"><a class="page-link" href="#">3</a></li>
-                    <li class="page-item"><a class="page-link" href="#">Next</a></li>
-                  </ul>
-                </nav>
-              </div>
-            </div>
-
-
-            <div class="row mb-5 mt-5">
-
-              <div class="col-md-12">
-                <h2 class="mb-4">Bài viết phổ biến</h2>
-              </div>
-        
-              <div class="col-md-12">
-                <div class="post-entry-horzontal">
-                  <a href="/post1">
-                    <div class="image element-animate"  data-animate-effect="fadeIn" style="background-image: url({{data_doc[1].pic}});"></div>
-                    <span class="text">
-                      <div class="post-meta">
-                        <span class="category">......</span>
-                        <span class="mr-2">2019</span> &bullet;
-                        <span class="ml-2"><span class="fa fa-comments"></span> 6767</span>
-                      </div>
-                      <h2>{{data_doc[1].name}}</h2>
-                    </span>
-                  </a>
-                </div>
-
-                <div class="col-md-12">
-                  <div class="post-entry-horzontal">
-                    <a href="/post2">
-                      <div class="image element-animate"  data-animate-effect="fadeIn" style="background-image: url({{data_doc[2].pic}});"></div>
-                      <span class="text">
-                        <div class="post-meta">
-                          <span class="category">......</span>
-                          <span class="mr-2">2019</span> &bullet;
-                          <span class="ml-2"><span class="fa fa-comments"></span> 6767</span>
-                        </div>
-                        <h2>{{data_doc[2].name}}</h2>
-                      </span>
-                    </a>
-                  </div>
-
-                  <div class="col-md-12">
-                    <div class="post-entry-horzontal">
-                      <a href="/post3">
-                        <div class="image element-animate"  data-animate-effect="fadeIn" style="background-image: url({{data_doc[3].pic}});"></div>
-                        <span class="text">
-                          <div class="post-meta">
-                            <span class="category">......</span>
-                            <span class="mr-2">2019</span> &bullet;
-                            <span class="ml-2"><span class="fa fa-comments"></span> 6767</span>
-                          </div>
-                          <h2>{{data_doc[3].name}}</h2>
-                        </span>
-                      </a>
-                    </div>
-              
-                <!-- END post -->
-              
-              </div>
-            </div>
-          </div>
-<!-- END main-content -->
-
-
-
+<br><br>
 
 
             <div class="sidebar-box">
