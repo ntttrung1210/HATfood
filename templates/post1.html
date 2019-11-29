@@ -79,9 +79,8 @@
 
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="/bmi">Tính chỉ số BMI </a>
+                <a class="nav-link" href="../templates/abouthat.html">Tính chỉ số BMI </a>
               </li>
-
               <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="../templates/category.html" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Liên hệ</a>
                 <div class="dropdown-menu" aria-labelledby="dropdown01">
@@ -103,143 +102,30 @@
 
 
 
-    <section class="site-section pt-5">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-12">
-
-            
-            <div class="owl-carousel owl-theme home-slider">
-              <div>
-                <a  class="a-block d-flex align-items-center height-lg" style="background-image: url('../static/images/img_1.jpg'); ">
-                  <div class="text half-to-full">
-                    <div class="post-meta">
-                      <span class="category">HATfood</span>
-                      <span class="mr-2">November 2019 </span> &bullet;
-                      <span class="ml-2"><span class="fa fa-comments"></span> 15</span>
-                    </div>
-                    <h3>Hot food</h3>
-                    <p>Good for health!</p>
-                  </div>
-                </a>
-              </div>
-              <div>
-                <a  class="a-block d-flex align-items-center height-lg" style="background-image: url('../static/images/img_2.jpg'); ">
-                  <div class="text half-to-full">
-                    <div class="post-meta">
-                      <span class="category">HATfood</span>
-                      <span class="mr-2">November 2019 </span> &bullet;
-                      <span class="ml-2"><span class="fa fa-comments"></span> 9</span>
-                    </div>
-                    <h3>Hot food</h3>
-                    <p>Good for health!</p>
-                  </div>
-                </a>
-              </div>
-              <div>
-                <a  class="a-block d-flex align-items-center height-lg" style="background-image: url('../static/images/img_3.jpg'); ">
-                  <div class="text half-to-full">
-                    <div class="post-meta">
-                      <span class="category">HATfood</span>
-                      <span class="mr-2">November 2019</span> &bullet;
-                      <span class="ml-2"><span class="fa fa-comments"></span> 7</span>
-                    </div>
-                    <h3>Hot food</h3>
-                    <p>Good for health!</p>
-                  </div>
-                </a>
-              </div>
-            </div>
-            
-
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-md-6 col-lg-4">
-            <a href="/coffee" class="a-block d-flex align-items-center height-md" style="background-image: url('../static/images/img_4.jpg'); ">
-              <div class="text">
-                <div class="post-meta">
-                  <span class="category">Place</span>
-                  <span class="mr-2">November 2019</span> &bullet;
-                  <span class="ml-2"><span class="fa fa-comments"></span> 3</span>
-                </div>
-                <h3>Cafe Lissom Parlour -  68A Nguyễn Hữu Huân, Quận Hoàn Kiếm, Hà Nội</h3>
-              </div>
-            </a>
-          </div>
-          <div class="col-md-6 col-lg-4">
-            <a href="/story_pizza" class="a-block d-flex align-items-center height-md" style="background-image: url('../static/images/img_5.jpg'); ">
-              <div class="text">
-                <div class="post-meta">
-                  <span class="category">Food</span>
-                  <span class="mr-2">November 2019</span> &bullet;
-                  <span class="ml-2"><span class="fa fa-comments"></span> 3</span>
-                </div>
-                <h3>Pizza - Mang theo câu chuyện của cả một nền văn hóa đầy màu sắc</h3>
-              </div>
-            </a>
-          </div>
-          <div class="col-md-6 col-lg-4">
-            <a href="/advice" class="a-block d-flex align-items-center height-md" style="background-image: url('../static/images/img_6.jpg'); ">
-              <div class="text">
-                <div class="post-meta">
-                  <span class="category">Health</span>
-                  <span class="mr-2">November 2019</span> &bullet;
-                  <span class="ml-2"><span class="fa fa-comments"></span> 3</span>
-                </div>
-                <h3>100 Lời khuyên quý báu để giữ gìn sức khỏe - Ai cũng phải nên ghi nhớ</h3>
-              </div>
-            </a>
-          </div>
-        </div>
-      </div>
-
-
-    </section>
-    <!-- END section -->
-
-
-
-
-
     <section class="site-section py-sm">
       <div class="container">
         <div class="row">
           <div class="col-md-6">
-            <h2 class="mb-4">Những món ăn hot tuần này</h2>
+            <h2 class="mb-4"></h2>
           </div>
         </div>
-        <div class="row blog-entries">
+        <div class="row blog-entries" style="color: black;">
           <div class="main-content">
-            <div class="row">
-            {% for v in range(18) %}
-              <div class="col-md-4">
-                <!-- <a href="../templates/blog-single.html" class="blog-entry element-animate" data-animate-effect="fadeIn"> -->
-                  <img src={{data[v].pic}} alt="Image placeholder">
-                  <div class="blog-content-body">
-                    <div class="post-meta">
-                      <span class="category">Food</span>
-                      <span class="mr-2">November 2019</span> &bullet;
-                      <span class="ml-2"><span class="fa fa-comments"></span> 3</span>
-                    </div>
-                    <h2>{{data[v].name}}</h2>
-                    <h4>{{data[v].address}}</h4>
-                  </div>
-                </a>
-              </div>
-            {%endfor%}
-              
+            <div id="divDetailContent">
+                <div style="text-align: justify;"><strong>Rất &nbsp;nhiều người trong chúng ta vẫn nghĩ là ăn nhiều hoa quả thì sẽ không bị béo, hoặc những người bị thừa cân béo phì &nbsp;lại nhịn ăn cơm, thay bằng hoa quả để giảm cân nhưng cân nặng không giảm mà vẫn tăng tại sao lại như vậy?<br></strong><br>Các loại quả chín nhất là những loại quả có vị ngọt có hàm lượng đường cao, khi ăn nhiều thì các loại quả này cũng cung cấp cho cơ thể nguồn năng lượng khá lớn. Ví dụ: nếu bạn ăn hai quả chuối tiêu loại 100g thì năng lượng cũng bằng ăn một bát cơm, ăn một quả na, một quả xoài loại 200 – 250g, ăn 300g mít, hoặc vải, nhãn, thì cũng tương đương với 1 bát cơm, cho nên nếu nhịn ăn cơm mà ăn nhiều các lọai quả ngọt này thì vẫn bị tăng cân là chuyện đương nhiên</div><div style="text-align: center;"><em><br></em></div><div style="text-align: center;"><em><img class="img-editor img-responsive" alt="" border="0" src="../static/images/1_312.jpg">
+</em></div><div style="text-align: center;"><em>&nbsp;Ảnh minh họa</em></div><div style="text-align: justify;"><br>Nếu muốn không bị béo, hoặc muốn giảm cân, bạn nên ăn các loại quả có hàm lượng đường thấp như: dưa chuột, củ đậu, bưởi, thanh long, táo ta, lê, cam, quýt, trong đó dưa chuột và bưởi còn có tác dụng giảm béo, giảm lượng mỡ dư thừa trong máu. Dưa chuột, củ đậu còn có thể dùng làm thức ăn cho những người thừa cân béo phì có thói quen ăn vặt, vì các loại củ, quả này có năng lượng rất thấp, thành phần chủ yếu là nước, cung cấp cho cơ thể nhiều chất xơ, các vitamin và khoáng chất.<br><br>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Ths. Lê Thị Hải - Viện Dinh dưỡng</div>
+            </div>
             </div>
 
             <div class="row">
               <div class="col-md-12 text-center">
                 <nav aria-label="Page navigation" class="text-center">
                   <ul class="pagination">
-                    <!-- <li class="page-item  active"><a class="page-link" href="#">Prev</a></li> -->
-                    <li class="page-item"><a class="page-link" href="/">1</a></li>
-                    <li class="page-item"><a class="page-link" href="/2">2</a></li>
-                    <li class="page-item"><a class="page-link" href="/3">3</a></li>
-                    <!-- <li class="page-item"><a class="page-link" href="#">Next</a></li> -->
+                    <!-- <li class="page-item  active"><a class="page-link" href="#">Prev</a></li>
+                    <li class="page-item"><a class="page-link" href="#">1</a></li>
+                    <li class="page-item"><a class="page-link" href="#">2</a></li>
+                    <li class="page-item"><a class="page-link" href="#">3</a></li>
+                    <li class="page-item"><a class="page-link" href="#">Next</a></li> -->
                   </ul>
                 </nav>
               </div>
@@ -304,8 +190,6 @@
           </div>
 <!-- END main-content -->
 
-        
-
 
 
 
@@ -337,7 +221,7 @@
                 <li><a href="/doan">Đồ ăn </a></li>
                 <li><a href="/monlau">Món lẩu</a></li>
                 <li><a href="/viahe">Vỉa hè</a></li>
-                <li><a href="mipho">Mì phở</a></li>
+                <li><a href="/mipho">Mì phở</a></li>
                
               </ul>
             </div>

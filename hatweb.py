@@ -8,6 +8,15 @@ def main_page():
     b=len(get_all_food())
     return render_template('index.html', data=get_all_food(),a=b,data_doc=get_all_doc())
 
+@app.route('/2')
+def hot2():
+    b=len(get_all_food())
+    return render_template('hot2.html', data=get_all_food(),a=b,data_doc=get_all_doc())
+
+@app.route('/3')
+def hot3():
+    b=len(get_all_food())
+    return render_template('hot3.html', data=get_all_food(),a=b,data_doc=get_all_doc())
 
 @app.route('/trangmieng')
 def trangmieng():
@@ -69,15 +78,27 @@ def mipho():
 
 @app.route('/post1')
 def post1():
-    return render_template('doc.html',data=get_all_content()[1],data_doc=get_all_doc())
+    return render_template('post1.html',data_doc=get_all_doc())
 
 @app.route('/post2')
 def post2():
-    return render_template('doc.html',data=get_all_content()[2],data_doc=get_all_doc())
+    return render_template('post2.html',data_doc=get_all_doc())
 
 @app.route('/post3')
 def post3():
-    return render_template('doc.html',data=get_all_content()[3],data_doc=get_all_doc())
+    return render_template('post3.html',data_doc=get_all_doc())
+
+@app.route('/advice')
+def advice():
+    return render_template('advice.html',data_doc=get_all_doc())
+
+@app.route('/story_pizza')
+def pizza():
+    return render_template('pizza.html',data_doc=get_all_doc())
+
+@app.route('/coffee')
+def coffee():
+    return render_template('coffee.html',data_doc=get_all_doc())
 
 if __name__ == '__main__':
     app.run(host='127.0.0.1', port=8000, debug=True)

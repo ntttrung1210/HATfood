@@ -111,7 +111,7 @@
             
             <div class="owl-carousel owl-theme home-slider">
               <div>
-                <a  class="a-block d-flex align-items-center height-lg" style="background-image: url('../static/images/img_1.jpg'); ">
+                <a href="/hot" class="a-block d-flex align-items-center height-lg" style="background-image: url('../static/images/img_1.jpg'); ">
                   <div class="text half-to-full">
                     <div class="post-meta">
                       <span class="category">HATfood</span>
@@ -124,7 +124,7 @@
                 </a>
               </div>
               <div>
-                <a  class="a-block d-flex align-items-center height-lg" style="background-image: url('../static/images/img_2.jpg'); ">
+                <a href="/hot" class="a-block d-flex align-items-center height-lg" style="background-image: url('../static/images/img_2.jpg'); ">
                   <div class="text half-to-full">
                     <div class="post-meta">
                       <span class="category">HATfood</span>
@@ -137,7 +137,7 @@
                 </a>
               </div>
               <div>
-                <a  class="a-block d-flex align-items-center height-lg" style="background-image: url('../static/images/img_3.jpg'); ">
+                <a href="/hot" class="a-block d-flex align-items-center height-lg" style="background-image: url('../static/images/img_3.jpg'); ">
                   <div class="text half-to-full">
                     <div class="post-meta">
                       <span class="category">HATfood</span>
@@ -156,7 +156,7 @@
         </div>
         <div class="row">
           <div class="col-md-6 col-lg-4">
-            <a href="/coffee" class="a-block d-flex align-items-center height-md" style="background-image: url('../static/images/img_4.jpg'); ">
+            <a href="../templates/blog-single.html" class="a-block d-flex align-items-center height-md" style="background-image: url('../static/images/img_4.jpg'); ">
               <div class="text">
                 <div class="post-meta">
                   <span class="category">Place</span>
@@ -168,7 +168,7 @@
             </a>
           </div>
           <div class="col-md-6 col-lg-4">
-            <a href="/story_pizza" class="a-block d-flex align-items-center height-md" style="background-image: url('../static/images/img_5.jpg'); ">
+            <a href="../templates/blog-single.html" class="a-block d-flex align-items-center height-md" style="background-image: url('../static/images/img_5.jpg'); ">
               <div class="text">
                 <div class="post-meta">
                   <span class="category">Food</span>
@@ -212,9 +212,9 @@
         <div class="row blog-entries">
           <div class="main-content">
             <div class="row">
-            {% for v in range(18) %}
+            {% for v in range(18,36) %}
               <div class="col-md-4">
-                <!-- <a href="../templates/blog-single.html" class="blog-entry element-animate" data-animate-effect="fadeIn"> -->
+                <a href="../templates/blog-single.html" class="blog-entry element-animate" data-animate-effect="fadeIn">
                   <img src={{data[v].pic}} alt="Image placeholder">
                   <div class="blog-content-body">
                     <div class="post-meta">
@@ -236,9 +236,9 @@
                 <nav aria-label="Page navigation" class="text-center">
                   <ul class="pagination">
                     <!-- <li class="page-item  active"><a class="page-link" href="#">Prev</a></li> -->
-                    <li class="page-item"><a class="page-link" href="/">1</a></li>
+                    <!-- <li class="page-item"><a class="page-link" href="/">1</a></li>
                     <li class="page-item"><a class="page-link" href="/2">2</a></li>
-                    <li class="page-item"><a class="page-link" href="/3">3</a></li>
+                    <li class="page-item"><a class="page-link" href="/3">3</a></li> -->
                     <!-- <li class="page-item"><a class="page-link" href="#">Next</a></li> -->
                   </ul>
                 </nav>

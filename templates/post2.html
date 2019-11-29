@@ -79,9 +79,8 @@
 
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="/bmi">Tính chỉ số BMI </a>
+                <a class="nav-link" href="../templates/abouthat.html">Tính chỉ số BMI </a>
               </li>
-
               <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="../templates/category.html" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Liên hệ</a>
                 <div class="dropdown-menu" aria-labelledby="dropdown01">
@@ -103,148 +102,16 @@
 
 
 
-    <section class="site-section pt-5">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-12">
-
-            
-            <div class="owl-carousel owl-theme home-slider">
-              <div>
-                <a  class="a-block d-flex align-items-center height-lg" style="background-image: url('../static/images/img_1.jpg'); ">
-                  <div class="text half-to-full">
-                    <div class="post-meta">
-                      <span class="category">HATfood</span>
-                      <span class="mr-2">November 2019 </span> &bullet;
-                      <span class="ml-2"><span class="fa fa-comments"></span> 15</span>
-                    </div>
-                    <h3>Hot food</h3>
-                    <p>Good for health!</p>
-                  </div>
-                </a>
-              </div>
-              <div>
-                <a  class="a-block d-flex align-items-center height-lg" style="background-image: url('../static/images/img_2.jpg'); ">
-                  <div class="text half-to-full">
-                    <div class="post-meta">
-                      <span class="category">HATfood</span>
-                      <span class="mr-2">November 2019 </span> &bullet;
-                      <span class="ml-2"><span class="fa fa-comments"></span> 9</span>
-                    </div>
-                    <h3>Hot food</h3>
-                    <p>Good for health!</p>
-                  </div>
-                </a>
-              </div>
-              <div>
-                <a  class="a-block d-flex align-items-center height-lg" style="background-image: url('../static/images/img_3.jpg'); ">
-                  <div class="text half-to-full">
-                    <div class="post-meta">
-                      <span class="category">HATfood</span>
-                      <span class="mr-2">November 2019</span> &bullet;
-                      <span class="ml-2"><span class="fa fa-comments"></span> 7</span>
-                    </div>
-                    <h3>Hot food</h3>
-                    <p>Good for health!</p>
-                  </div>
-                </a>
-              </div>
-            </div>
-            
-
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-md-6 col-lg-4">
-            <a href="/coffee" class="a-block d-flex align-items-center height-md" style="background-image: url('../static/images/img_4.jpg'); ">
-              <div class="text">
-                <div class="post-meta">
-                  <span class="category">Place</span>
-                  <span class="mr-2">November 2019</span> &bullet;
-                  <span class="ml-2"><span class="fa fa-comments"></span> 3</span>
-                </div>
-                <h3>Cafe Lissom Parlour -  68A Nguyễn Hữu Huân, Quận Hoàn Kiếm, Hà Nội</h3>
-              </div>
-            </a>
-          </div>
-          <div class="col-md-6 col-lg-4">
-            <a href="/story_pizza" class="a-block d-flex align-items-center height-md" style="background-image: url('../static/images/img_5.jpg'); ">
-              <div class="text">
-                <div class="post-meta">
-                  <span class="category">Food</span>
-                  <span class="mr-2">November 2019</span> &bullet;
-                  <span class="ml-2"><span class="fa fa-comments"></span> 3</span>
-                </div>
-                <h3>Pizza - Mang theo câu chuyện của cả một nền văn hóa đầy màu sắc</h3>
-              </div>
-            </a>
-          </div>
-          <div class="col-md-6 col-lg-4">
-            <a href="/advice" class="a-block d-flex align-items-center height-md" style="background-image: url('../static/images/img_6.jpg'); ">
-              <div class="text">
-                <div class="post-meta">
-                  <span class="category">Health</span>
-                  <span class="mr-2">November 2019</span> &bullet;
-                  <span class="ml-2"><span class="fa fa-comments"></span> 3</span>
-                </div>
-                <h3>100 Lời khuyên quý báu để giữ gìn sức khỏe - Ai cũng phải nên ghi nhớ</h3>
-              </div>
-            </a>
-          </div>
-        </div>
-      </div>
-
-
-    </section>
-    <!-- END section -->
-
-
-
-
-
     <section class="site-section py-sm">
       <div class="container">
         <div class="row">
           <div class="col-md-6">
-            <h2 class="mb-4">Những món ăn hot tuần này</h2>
+            <h2 class="mb-4"></h2>
           </div>
         </div>
-        <div class="row blog-entries">
-          <div class="main-content">
-            <div class="row">
-            {% for v in range(18) %}
-              <div class="col-md-4">
-                <!-- <a href="../templates/blog-single.html" class="blog-entry element-animate" data-animate-effect="fadeIn"> -->
-                  <img src={{data[v].pic}} alt="Image placeholder">
-                  <div class="blog-content-body">
-                    <div class="post-meta">
-                      <span class="category">Food</span>
-                      <span class="mr-2">November 2019</span> &bullet;
-                      <span class="ml-2"><span class="fa fa-comments"></span> 3</span>
-                    </div>
-                    <h2>{{data[v].name}}</h2>
-                    <h4>{{data[v].address}}</h4>
-                  </div>
-                </a>
-              </div>
-            {%endfor%}
-              
-            </div>
-
-            <div class="row">
-              <div class="col-md-12 text-center">
-                <nav aria-label="Page navigation" class="text-center">
-                  <ul class="pagination">
-                    <!-- <li class="page-item  active"><a class="page-link" href="#">Prev</a></li> -->
-                    <li class="page-item"><a class="page-link" href="/">1</a></li>
-                    <li class="page-item"><a class="page-link" href="/2">2</a></li>
-                    <li class="page-item"><a class="page-link" href="/3">3</a></li>
-                    <!-- <li class="page-item"><a class="page-link" href="#">Next</a></li> -->
-                  </ul>
-                </nav>
-              </div>
-            </div>
-
+        <div id="divDetailContent" style="color: black;">
+            <p align="center" style="text-align: justify;"><span style="text-align: left;">Trứng là sản phẩm của một loại gia cầm, mỗi loại gia cầm người ta có thể phân ra thành nhiều loại trứng khác nhau tùy thuộc vào cách chăm sóc, thức ăn, môi trường chăn nuôi. Trứng là loại thức ăn có giá trị dinh dưỡng cao, trứng có đủ các thành phần dinh dưỡng: chất đạm, chất béo, can xi, sắt, kẽm, se len, vitamin B12, vitamin D, các acid béo no, acid béo không no một nối đôi và nhiều nối đôi, cholesterol,...Hơn nữa, tỷ lệ các chất dinh dưỡng trong trứng rất phù hợp và cân đối. Thành phần dinh dưỡng có trong 100 gam trứng gà toàn phần như sau: 14,8 g chất đạm; 11,6 g chất béo; 55 mg can xi; 2,70 mg sắt; 47 µg folat; 210 mg phospho; 1.29 µg vitamin B12; 700 µg vitaminA; acid béo không no nhiều nối đôi 1,36 g; cholesterol 470 mg, cùng nhiều chất khóang, acid béo no và không no khác.<br></span></p><table><tbody><tr><td>&nbsp;<img class="img-editor img-responsive" src="../static/images/231016_0851502.jpg" style="width: 580px; height: 390px; border-width: 1px; border-style: solid; border-color: rgb(31, 73, 125);"><br><div style="text-align: center;"><i style="font-size: 12px; font-family: Verdana;">Ảnh minh họa</i></div></td></tr></tbody></table><p><span style="font-size: 13px; font-family: Verdana; text-align: justify;">Trứng tươi (trứng mới) có hai phần, có ranh giới rõ ràng giữa lòng đỏ và lòng trắng, trứng để lâu thì danh giới đó không còn. Lòng đỏ trứng gà có giá trị dinh dưỡng rất cao, trong 100 gam có protein 13,6 gam; lipid 29,8 gam; 134 mg can xi; sắt 7.0 mg; kẽm 3.7 mg; folat 146 µmg; vitamin A 960 µg; cholesterol 2000mg và có rất nhiều các vitamin và khoáng chất khác, cũng như acid béo không no một hay nhiều nối đôi. Thành phần của lòng trắng có ít chất dinh dưỡng hơn, trong 100 gam có 10,3 gam protein; can xi 19 mg. Chất đạm của trứng là nguồn cung cấp rất tốt các acid amin cần thiết có vai trò quan trọng cho cơ thể, đặc biệt cần cho sự phát triển cả về cân nặng và chiều cao của trẻ. Trứng có nguồn chất béo rất quí đó là lecithin, lecithin thường có ít ở các thực phẩm khác (trừ đậu nành). Lecithin giúp giảm cholesterol</span><i style="font-size: 13px; font-family: Verdana; text-align: justify;">, </i><span style="font-size: 13px; font-family: Verdana; text-align: justify;">tăng HDL cholesterol (cholesterol tốt) và làm giảm LDL cholesterol (cholesterol xấu) hiện hữu trong cơ thể con người. Ngoài ra lecithin giúp giảm cân</span><i style="font-size: 13px; font-family: Verdana; text-align: justify;">, </i><span style="font-size: 13px; font-family: Verdana; text-align: justify;">giúp phá vỡ và phân tán mỡ trong thức ăn và trong máu thành những phân tử nhỏ hơn. Khi đó, cơ thể sẽ sử dụng lượng mỡ đã được phân chia nhỏ này để làm nguồn nhiên liệu cung cấp năng lượng cho cơ thể hơn là dự trữ trong các mô tế bào. &nbsp;</span></p> <p style="text-align: justify;"><font face="Verdana" style="font-size: 13px;">Mặc dù trứng có chứa lượng cholesterol đáng kể (600 mg cholesterol/100g trứng gà), nhưng lại có tương quan thuận lợi giữa Lecithin và cholesterol do vậy Lecithin sẽ có vai trò điều hòa cholesterol, ngăn ngừa quá trình xơ vữa động mạch và đào thải cholesterol ra khỏi cơ thể<i>.</i></font></p> <p style="text-align: justify;"><font face="Verdana" style="font-size: 13px;">Lòng đỏ và lòng trắng trứng có độ đồng hóa khác nhau. Với lòng đỏ, do độ nhũ tương và các thành phần dinh dưỡng phân tán đều nên ăn sống hoặc chín cũng rất dễ đồng hóa, hấp thu. Lòng trắng trứng ăn sống hoặc trần tái dễ gây đầy bụng khó tiêu. Vì vậy, lòng trắng trứng cần được làm chín trước khi ăn. Trứng là thức ăn quen thuộc và giàu chất dinh dưỡng, các chất dinh dưỡng lại có tỷ lệ cân đối, do vậy trứng có thể sử dụng cho cả trẻ em và người lớn. Với trẻ nhỏ từ 6 - 7 tháng tuổi, mỗi bữa ăn 1/2 lòng đỏ trứng gà; trẻ từ 8 - 9 tháng tuổi, mỗi bữa ăn 1 lòng đỏ trứng gà hoặc 4 quả trứng chim cút; trẻ từ 10 - 12 tháng tuổi cho ăn cả lòng đỏ và lòng trắng<a name="_GoBack"></a> và mỗi bữa ăn 1 quả; trẻ từ 1 - 2 tuổi ăn từ 3 - 4 quả/tuần. Với người lớn, một tuần chỉ nên ăn 3 quả/tuần, người bị tăng huyết áp hoặc cholesterol cao trong máu vẫn có thể ăn trứng, vì nó không làm tăng huyết áp và cholesterol máu, tuy nhiên một tuần chỉ nên ăn từ 1- 2 quả/tuần.</font></p><p style="text-align: justify;"><font face="Verdana" style="font-size: 13px;"> Cách lựa chọn trứng có chất lượng tốt:</font></p> <p style="text-align: justify;"><font face="Verdana" style="font-size: 13px;"><i>Soi trên nguồn ánh sáng:</i> Nắm quả trứng trong lòng bàn tay, chỉ hở hai đầu trứng, mắt nhìn vào đầu trứng, đầu kia soi lên một nguồn ánh sáng (ánh sáng mặt trời hoặc sáng điện). Quan sát phần bên trong của trứng có vết máu không? có ký sinh trùng, giun sán, có vật gì lạ không?. Trứng soi có màu hồng, trong suốt với một chấm hồng; túi khí có đường kính &lt; 1cm, đường bao quanh cố định.</font></p> <p style="text-align: justify;"><font face="Verdana" style="font-size: 13px;"><i>Thả vào dung dịch nước muối 10%:</i> khi thả vào dung dịch trứng chìm xuống đáy có nghĩa là trứng mới đẻ trong ngày. Trứng lơ lửng trong dung dịch có nghĩa là trứng đã đẻ 3 -5 ngày. Nếu trứng nổi trên mặt dung dịch thì trứng đã để quá 5 ngày.</font></p> <p style="text-align: justify;"><font face="Verdana" style="font-size: 13px;"><i>Phương pháp lắc trứng:</i> cầm quả trứng giữa hai ngón tay trỏ và ngón tay cái, khẽ lắc. Trứng mới lắc không kêu, trứng càng để lâu lắc càng kêu.</font></p> <p align="center" style="text-align: right;"><i><font face="Verdana" style="font-size: 13px;">Ths.Bs. Nguyễn Văn Tiến&nbsp;</font><span style="font-size: 13px; font-family: Verdana;">– Viện Dinh dưỡng<br><br><br><br><br></span></i></p> <p>&nbsp;</p>
+        </div>
 
             <div class="row mb-5 mt-5">
 
@@ -304,8 +171,6 @@
           </div>
 <!-- END main-content -->
 
-        
-
 
 
 
@@ -337,7 +202,7 @@
                 <li><a href="/doan">Đồ ăn </a></li>
                 <li><a href="/monlau">Món lẩu</a></li>
                 <li><a href="/viahe">Vỉa hè</a></li>
-                <li><a href="mipho">Mì phở</a></li>
+                <li><a href="/mipho">Mì phở</a></li>
                
               </ul>
             </div>

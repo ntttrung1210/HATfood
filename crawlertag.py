@@ -4,7 +4,6 @@ from selenium.webdriver.common.action_chains import ActionChains
 import time
 from hfdb import *
 browser=webdriver.Chrome()
-# ls=[]
 browser.get('https://www.now.vn/ha-noi/danh-sach-dia-diem-giao-tan-noi?q=hot')
 time.sleep(2)
 for i in range(3):
@@ -12,13 +11,10 @@ for i in range(3):
     for v in ele:
         name=v.find_element_by_xpath(".//h4[@class='name-res']").text
         address=v.find_element_by_xpath(".//div[@class='address-res']").text
-        pic=v.find_element_by_xpath(".//img").get_attribute('src')
-        if pic=='':
-            pic=v.find_element_by_xpath(".//a[1]//div[1]//img[1]").get_attribute('src')
-            if pic=='':
-                pic=v.find_element_by_xpath("./a[1]//div[1]//img[1]").get_attribute('src')
-        insert_hot(name,pic,address)
-        # ls.append({'name':name,'pic':pic,'address':address})
+        pic=v.find_element_by_xpath(".//a[1]//div[1]//img[1]").get_attribute('src')
+        if pic!='':
+            insert_hot(name,pic,address)
+
     ele1=browser.find_element_by_xpath(".//span[@class='icon icon-paging-next']")
     ele1.click()
     time.sleep(2)

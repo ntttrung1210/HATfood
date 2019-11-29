@@ -79,9 +79,8 @@
 
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="/bmi">Tính chỉ số BMI </a>
+                <a class="nav-link" href="../templates/abouthat.html">Tính chỉ số BMI </a>
               </li>
-
               <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="../templates/category.html" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Liên hệ</a>
                 <div class="dropdown-menu" aria-labelledby="dropdown01">
@@ -103,143 +102,93 @@
 
 
 
-    <section class="site-section pt-5">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-12">
-
-            
-            <div class="owl-carousel owl-theme home-slider">
-              <div>
-                <a  class="a-block d-flex align-items-center height-lg" style="background-image: url('../static/images/img_1.jpg'); ">
-                  <div class="text half-to-full">
-                    <div class="post-meta">
-                      <span class="category">HATfood</span>
-                      <span class="mr-2">November 2019 </span> &bullet;
-                      <span class="ml-2"><span class="fa fa-comments"></span> 15</span>
-                    </div>
-                    <h3>Hot food</h3>
-                    <p>Good for health!</p>
-                  </div>
-                </a>
-              </div>
-              <div>
-                <a  class="a-block d-flex align-items-center height-lg" style="background-image: url('../static/images/img_2.jpg'); ">
-                  <div class="text half-to-full">
-                    <div class="post-meta">
-                      <span class="category">HATfood</span>
-                      <span class="mr-2">November 2019 </span> &bullet;
-                      <span class="ml-2"><span class="fa fa-comments"></span> 9</span>
-                    </div>
-                    <h3>Hot food</h3>
-                    <p>Good for health!</p>
-                  </div>
-                </a>
-              </div>
-              <div>
-                <a  class="a-block d-flex align-items-center height-lg" style="background-image: url('../static/images/img_3.jpg'); ">
-                  <div class="text half-to-full">
-                    <div class="post-meta">
-                      <span class="category">HATfood</span>
-                      <span class="mr-2">November 2019</span> &bullet;
-                      <span class="ml-2"><span class="fa fa-comments"></span> 7</span>
-                    </div>
-                    <h3>Hot food</h3>
-                    <p>Good for health!</p>
-                  </div>
-                </a>
-              </div>
-            </div>
-            
-
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-md-6 col-lg-4">
-            <a href="/coffee" class="a-block d-flex align-items-center height-md" style="background-image: url('../static/images/img_4.jpg'); ">
-              <div class="text">
-                <div class="post-meta">
-                  <span class="category">Place</span>
-                  <span class="mr-2">November 2019</span> &bullet;
-                  <span class="ml-2"><span class="fa fa-comments"></span> 3</span>
-                </div>
-                <h3>Cafe Lissom Parlour -  68A Nguyễn Hữu Huân, Quận Hoàn Kiếm, Hà Nội</h3>
-              </div>
-            </a>
-          </div>
-          <div class="col-md-6 col-lg-4">
-            <a href="/story_pizza" class="a-block d-flex align-items-center height-md" style="background-image: url('../static/images/img_5.jpg'); ">
-              <div class="text">
-                <div class="post-meta">
-                  <span class="category">Food</span>
-                  <span class="mr-2">November 2019</span> &bullet;
-                  <span class="ml-2"><span class="fa fa-comments"></span> 3</span>
-                </div>
-                <h3>Pizza - Mang theo câu chuyện của cả một nền văn hóa đầy màu sắc</h3>
-              </div>
-            </a>
-          </div>
-          <div class="col-md-6 col-lg-4">
-            <a href="/advice" class="a-block d-flex align-items-center height-md" style="background-image: url('../static/images/img_6.jpg'); ">
-              <div class="text">
-                <div class="post-meta">
-                  <span class="category">Health</span>
-                  <span class="mr-2">November 2019</span> &bullet;
-                  <span class="ml-2"><span class="fa fa-comments"></span> 3</span>
-                </div>
-                <h3>100 Lời khuyên quý báu để giữ gìn sức khỏe - Ai cũng phải nên ghi nhớ</h3>
-              </div>
-            </a>
-          </div>
-        </div>
-      </div>
-
-
-    </section>
-    <!-- END section -->
-
-
-
-
-
     <section class="site-section py-sm">
       <div class="container">
         <div class="row">
           <div class="col-md-6">
-            <h2 class="mb-4">Những món ăn hot tuần này</h2>
+            <h2 class="mb-4">Danh sách</h2>
           </div>
         </div>
         <div class="row blog-entries">
           <div class="main-content">
-            <div class="row">
-            {% for v in range(18) %}
-              <div class="col-md-4">
-                <!-- <a href="../templates/blog-single.html" class="blog-entry element-animate" data-animate-effect="fadeIn"> -->
-                  <img src={{data[v].pic}} alt="Image placeholder">
-                  <div class="blog-content-body">
-                    <div class="post-meta">
-                      <span class="category">Food</span>
-                      <span class="mr-2">November 2019</span> &bullet;
-                      <span class="ml-2"><span class="fa fa-comments"></span> 3</span>
+            <div class="block-detail" style="color: black;">
+                <div class="the-title"><h1>Câu chuyện thú vị về hành trình của chiếc Pizza</h1></div>
+                <div class="the-date">Thứ sáu, 12/04/2019, 07:00 GMT+7</div>
+                <div class="the-content">
+                    
+                    <div class="desc">
+                        <div class="the-short"><div style="text-align: justify;">Pizza – đi khắp thế giới nó vẫn được gọi với cái tên như thế. Trải qua nhiều biến động, đi đến với nhiều mảnh đất khác nhau, pizza đã và đang từng ngày viết nên những câu chuyện thú vị về chính mình.&nbsp;</div></div><div style="text-align: justify;">&nbsp;</div>
+            <div style="text-align: justify;">Pizza đi khắp thế gian. Ngày nay, pizza không đơn thuần là một món ăn phổ biến, đó còn là một di sản văn hóa của người châu Âu. Bạn biết bao nhiêu về món ăn đặc biệt này? Hãy cùng theo chân chiếc bánh pizza từ khi nó ra đời đến ngày hôm nay để khám phá.&nbsp;<br>
+            &nbsp;</div>
+            <div style="text-align: center;"><img src="http://dulichvietnam.com.vn/data/pizza-1.jpg" width="800" height="421" alt=""></div>
+            <div style="text-align: center;"><span style="color: rgb(128, 128, 128);"><em>Pizza được công nhận là một di sản văn hóa châu Âu</em></span></div>
+            <h3><br>
+            Lịch sử hình thành pizza<br>
+            &nbsp;</h3>
+            <div style="text-align: justify;">Theo những gì lịch sử ghi chép lại, tổ tiên của chiếc pizza được cho là những miếng bánh mỳ được nướng trên đá nóng còn sót lại từ các đám cháy trong rừng. Người xưa đã tận dụng những thức ăn còn thừa lại, sau đỏ đổ hết lên bề mặt của bánh mỳ và biến nó thành một món ăn mới. Thưởng thức món bánh mỳ nướng trên đá không những tạo một cảm giác khác cho vị giác, nó còn giúp cho bạn có thể tiết kiệm được thức ăn, không cần quá cầu kỳ trong việc chế biến.&nbsp;<br>
+            &nbsp;</div>
+            <div style="text-align: center;"><img src="http://dulichvietnam.com.vn/data/pizza-9.jpg" width="800" height="500" alt=""></div>
+            <div style="text-align: center;"><em><span style="color: rgb(128, 128, 128);">Tổ tiên của chiếc pizza là loại bánh mỳ được nướng trên đá</span></em><br>
+            &nbsp;</div>
+            <div style="text-align: justify;">Người ta kể lại rằng, khoảng 3000 năm trước, vào thời đỉnh cao của đế quốc Ba Tư, trong những cuộc viễn chinh kéo dài, không có nhiều thời gian để nấu nướng, những người lính Darius cực kỳ ưa chuộng loại bánh này. Bởi sự tiện dụng và hương vị đa dạng của nó. Ở thời điểm đó, pizza cũng chỉ đơn giản là thứ bánh mỳ tròn, phẳng và được phủ lên bề mặt một lớp phô mai mà thôi. Nhưng sự tiện lợi và hương vị của nó cũng đủ khiến cho đội quân viễn chinh mê mẩn.<br>
+            &nbsp;</div>
+            <div style="text-align: center;"><img src="http://dulichvietnam.com.vn/data/pizza-10.jpg" width="800" height="500" alt=""></div>
+            <div style="text-align: center;"><span style="color: rgb(128, 128, 128);"><em>Pizza là món ăn yêu thích của đội quân viễn chinh Darius</em></span><br>
+            &nbsp;</div>
+            <div style="text-align: justify;">Vào thế kỷ thứ 17, món pizzaioli dần được biết đến ở nhiều miền đất khác trên thế giới thông qua đường du lịch. Người ta tìm thấy một loại lò nướng đặc biệt được xây dựng ở cung điện mùa hè của nữ hoàng Maria Carolina d’Asburgo Lerena – vơ của vua Ferdinando IV. Điều đó khiến cho một món ăn dân dã, rẻ tiền, chỉ dành cho người nghèo được nhiều người biết đến. Nó đã dần khẳng định được vị trí của mình trong lòng mỗi người ở các nền văn hóa khác nhau, địa vị khác nhau và gu ẩm thực khác nhau.<br>
+            &nbsp;</div>
+            <div style="text-align: center;"><img src="http://dulichvietnam.com.vn/data/pizza-11.jpg" width="800" height="500" alt=""></div>
+            <div style="text-align: center;"><span style="color: rgb(128, 128, 128);"><em>Giờ đây, pizza đã rất phổ biến trên thế giới</em></span></div>
+            <h3><br>
+            Các phiên bản pizzz khi vòng quanh thế giới?<br>
+            &nbsp;</h3>
+            <div style="text-align: justify;">Nhắc đến pizza, chắc hẳn người ta sẽ nghĩ ngay đến nước Ý. Bởi đây là món ăn truyền thống của đất nước này. Món ăn dẹt, tròn này đã đi khắp thế gian và ngày nay, nó trở thành một món ăn phổ biến ở hầu như các nước trên thế giới.&nbsp;<br>
+            &nbsp;</div>
+            <div style="text-align: justify;">Tuy nhiên, đến với một vùng đất khác nhau, người ta lại chế biến món ăn này theo những cách riêng, tùy thuộc vào đặc trưng văn hóa và những nguyên liệu sẵn có của vùng đất đó. Nếu đi vòng quanh thế giới để thưởng thức pizza, bạn sẽ phải bất ngờ trước những câu chuyện đặc biệt của món ăn này.&nbsp;<br>
+            &nbsp;</div>
+            <div style="text-align: justify;">Loại pizza đặc trưng của vùng đất Thổ Nhĩ Kỳ được gọi là Lahmacun. Đây là món ăn có phần đế mỏng, giòn, ăn kèm cùng với nhiều loại nhân khác nhau như thịt bằm, rau trộn, sốt mayonnaise và có thể là cả nước cốt chanh. Đến Thổ Nhĩ Kỳ, bạn sẽ được khám phá món ăn này với hương vị hấp dẫn do chính tay đầu bếp ở đây thực hiện. Một điểm nhấn tuyệt vời cho chặng hành trình của bạn.&nbsp;<br>
+            &nbsp;</div>
+            <div style="text-align: center;"><strong>Xem thêm: <a href="https://tour.dulichvietnam.com.vn/du-lich-nuoc-ngoai/du-lich-tho-nhi-ky.html/39"><span style="color: rgb(128, 128, 128);">Tour du lịch Thổ Nhĩ Kỳ</span></a></strong><br>
+            &nbsp;</div>
+            <div style="text-align: center;"><img src="http://dulichvietnam.com.vn/data/pizza-5.jpg" width="800" height="500" alt=""></div>
+            <div style="text-align: center;"><span style="color: rgb(128, 128, 128);"><em>Lahmacun là một phiên bản độc đáo của chiếc pizza ở Thổ Nhĩ Kỳ&nbsp;</em></span><br>
+            &nbsp;</div>
+            <div style="text-align: justify;">Ở Nhật Bản có một loại bánh pizza đặc trưng được gọi là bánh xèo (Okonomiyaki). Đây là sự kết hợp giữa các sợi mỳ đan vào nhau, khoai nghiền, bắp cải hoặc trứng,… Đây là loại bánh được thiết kế theo hình dáng một chiếc pizza nhưng được sử dụng các nguyên liệu của bản địa.&nbsp;<br>
+            &nbsp;</div>
+            <div style="text-align: center;"><strong>Xem thêm: <a href="https://tour.dulichvietnam.com.vn/du-lich-nuoc-ngoai/du-lich-nhat-ban.html/34"><span style="color: rgb(128, 128, 128);">Tour du lịch Nhật Bản</span></a></strong><br>
+            &nbsp;</div>
+            <div style="text-align: center;"><img src="http://dulichvietnam.com.vn/data/pizza-6.jpg" width="800" height="500" alt=""></div>
+            <div style="text-align: center;"><span style="color: rgb(128, 128, 128);"><em>Loại pizza của người Nhật Bản&nbsp;</em></span><br>
+            &nbsp;</div>
+            <div style="text-align: justify;">Đến Tây Ban Nha, bạn sẽ gặp coca – một loại món ăn gồm một lát bánh mỳ nướng với rau quả và xúc xích. Nhân bánh được thiết kế theo nhiều cách khác nhau, tùy vào khẩu vị và sở thích của mỗi người.&nbsp;<br>
+            &nbsp;</div>
+            <div style="text-align: center;"><img src="http://dulichvietnam.com.vn/data/pizza-7.jpg" width="800" height="500" alt=""></div>
+            <div style="text-align: center;"><span style="color: rgb(128, 128, 128);"><em>Coca - phiên bản pizza của người Tây Ban Nha&nbsp;</em></span><br>
+            &nbsp;</div>
+            <div style="text-align: justify;">Ở Ấn Độ, người ta cũng khéo léo biến tấu một loại bánh theo ý tưởng của chiếc pizza. Đó là Pratha. Pratha có hình tròn, to gần bằng một chiếc đĩa lớn. Để làm món ăn này không quá cầu kỳ, đó là sự kết hợp giữa bột mỳ với rau, thịt và trứng. Bạn sẽ dễ tìm thấy những hương vị đặc biệt từ món ăn này khi đến với Ấn Độ.&nbsp;<br>
+            &nbsp;</div>
+            <div style="text-align: center;"><img src="http://dulichvietnam.com.vn/data/pizza-8.jpg" width="800" height="500" alt=""></div>
+            <div style="text-align: center;"><span style="color: rgb(128, 128, 128);"><em>Pratha - phiên bản pizza của người Ấn Độ&nbsp;</em></span><br>
+            &nbsp;</div>
+            <div style="text-align: justify;">Dạo quanh thế giới cùng chiếc pizza, bạn sẽ thấy chặng hành trình của mình thú vị hơn rất nhiều. Mặc dù đó chưa phải là tất cả, nhưng pizza theo những cách riêng đã mang đến nhiều hương vị đặc trưng, in đậm văn hóa, khẩu vị và cá tính của người dân vùng đất đó.&nbsp;</div>
+            <div style="text-align: justify;">&nbsp;</div>
                     </div>
-                    <h2>{{data[v].name}}</h2>
-                    <h4>{{data[v].address}}</h4>
-                  </div>
-                </a>
-              </div>
-            {%endfor%}
-              
+                    
+                    <div class="text-right"><b>Nguyễn Hằng</b></div>
+                    <div class="text-right"><b>Theo Báo Du lịch</b></div>
+            
+                </div>
             </div>
 
             <div class="row">
               <div class="col-md-12 text-center">
                 <nav aria-label="Page navigation" class="text-center">
                   <ul class="pagination">
-                    <!-- <li class="page-item  active"><a class="page-link" href="#">Prev</a></li> -->
-                    <li class="page-item"><a class="page-link" href="/">1</a></li>
-                    <li class="page-item"><a class="page-link" href="/2">2</a></li>
-                    <li class="page-item"><a class="page-link" href="/3">3</a></li>
-                    <!-- <li class="page-item"><a class="page-link" href="#">Next</a></li> -->
+                    <!-- <li class="page-item  active"><a class="page-link" href="#">Prev</a></li>
+                    <li class="page-item"><a class="page-link" href="#">1</a></li>
+                    <li class="page-item"><a class="page-link" href="#">2</a></li>
+                    <li class="page-item"><a class="page-link" href="#">3</a></li>
+                    <li class="page-item"><a class="page-link" href="#">Next</a></li> -->
                   </ul>
                 </nav>
               </div>
@@ -304,8 +253,6 @@
           </div>
 <!-- END main-content -->
 
-        
-
 
 
 
@@ -337,7 +284,7 @@
                 <li><a href="/doan">Đồ ăn </a></li>
                 <li><a href="/monlau">Món lẩu</a></li>
                 <li><a href="/viahe">Vỉa hè</a></li>
-                <li><a href="mipho">Mì phở</a></li>
+                <li><a href="/mipho">Mì phở</a></li>
                
               </ul>
             </div>
