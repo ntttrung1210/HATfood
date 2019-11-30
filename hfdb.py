@@ -32,6 +32,9 @@ def get_trangmieng():
 def get_sang():
     return list(db.sang.find())
 
+def get_khuya():
+    return list(db.khuya.find())
+
 def get_trua():
     return list(db.trua.find())
 
@@ -112,6 +115,8 @@ def insert_mipho(name, pic, address):
 def insert_sang(name, pic, address):
     db.sang.insert_one({'name': name, 'pic': pic, 'address': address})
 
+def insert_khuya(name, pic, address):
+    db.khuya.insert_one({'name': name, 'pic': pic, 'address': address})
 
 
 def insert_trua(name, pic, address):
