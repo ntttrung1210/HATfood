@@ -69,8 +69,15 @@ def search_by_addr(tinh, quan, duong):
         if ls_food[i]['tinh'] == tinh and ls_food[i]['quan'] == quan and ls_food[i]['duong'] == duong:
             ls.append(ls_food[i])
     return ls
-
-
+def check_name(ls,name):
+    dk=1
+    for i in range(len(ls)):
+        if ls[i]['name']==name:
+            dk=0
+            break
+        else:
+            dk=1
+    return dk
 s1 = u'ÀÁÂÃÈÉÊÌÍÒÓÔÕÙÚÝàáâãèéêìíòóôõùúýĂăĐđĨĩŨũƠơƯưẠạẢảẤấẦầẨẩẪẫẬậẮắẰằẲẳẴẵẶặẸẹẺẻẼẽẾếỀềỂểỄễỆệỈỉỊịỌọỎỏỐốỒồỔổỖỗỘộỚớỜờỞởỠỡỢợỤụỦủỨứỪừỬửỮữỰựỲỳỴỵỶỷỸỹ'
 s0 = u'AAAAEEEIIOOOOUUYaaaaeeeiioooouuyAaDdIiUuOoUuAaAaAaAaAaAaAaAaAaAaAaAaEeEeEeEeEeEeEeEeIiIiOoOoOoOoOoOoOoOoOoOoOoOoUuUuUuUuUuUuUuYyYyYyYy'
 def remove_accents(input_str):
@@ -82,42 +89,36 @@ def remove_accents(input_str):
 			s += c
 	return s
 
-def dk1(a,b):
-    a=remove_accents(a)
-    b=remove_accents(b)
-    dem=0
-    l1=len(a)
-    l2=len(b)
-    if l1>l2:
-        l=l2
-    else:
-        l=l1
-    for v in range(l):
-        if a[v].lower()==b[v].lower():
-            dem=dem+1
-        else:
-            break
-    if float(dem/l)>0.99:
-        return 1
-    else:
-        return 0
-
 def search_by_key(food):
     ls = []
     ls_f = get_all_food()
     ls_f1= get_all_food()
     for i in range(len(ls_f)):
+        ls_f[i]['name']=ls_f[i]['name'].lower()
         ls_f[i]['name']=remove_accents(ls_f[i]['name'])
-    food=remove_accents(food)
-    dk=0
+    food=remove_accents(food).lower()
+    for i in range(len(ls_f)):
+        if ls_f[i]['name'].find(food)!=-1 and check_name(ls,ls_f1[i]['name'])==1:
+            ls.append(ls_f1[i])
+    dem=0
     for i in range(len(ls_f)):
         new1=ls_f[i]['name'].split()
         new2=food.split()
         for j in range(len(new2)):
             for k in range(len(new1)):
-                if dk1(new1[k],new2[j])==1:
-                    ls.append(ls_f1[i])
-                break            
+                if new1[k]==new2[j] and check_name(ls,ls_f1[i]['name'])==1:
+                    dem=dem+1
+                    break  
+        if float(dem/len(new2))>0.9 and check_name(ls,ls_f1[i]['name'])==1:
+                ls.append(ls_f1[i])
+        if float(dem/len(new2))>0.8 and check_name(ls,ls_f1[i]['name'])==1:
+                ls.append(ls_f1[i])
+        if float(dem/len(new2))>0.75 and check_name(ls,ls_f1[i]['name'])==1:
+                ls.append(ls_f1[i])
+        if float(dem/len(new2))>0.5 and check_name(ls,ls_f1[i]['name'])==1:
+                ls.append(ls_f1[i])
+        
+        dem=0
     return ls
 
 
