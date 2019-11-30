@@ -97,7 +97,7 @@ def dk1(a,b):
             dem=dem+1
         else:
             break
-    if float(dem/l)>0.75:
+    if float(dem/l)>0.99:
         return 1
     else:
         return 0
@@ -125,11 +125,11 @@ def check_food(ad):
     kt = 0
     ls_f = get_all_food()
     for i in range(len(ls_f)):
-        if ls_f[i]['address'] == ad:
-            kt = 0
-            break
-        else:
+        if ls_f[i]['address'] != ad:
             kt = 1
+        else:
+            kt=0
+            break
     return kt
 
 
