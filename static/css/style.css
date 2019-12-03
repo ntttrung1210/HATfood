@@ -4,7 +4,7 @@ body {
   font-weight: 300;
   font-size: 18px;
   line-height: 1.9;
-  color: #f8f9fa;
+  color: #000000;
 }
 
 a {
@@ -290,7 +290,7 @@ header .navbar .dropdown-menu a {
 }
 
 .bio {
-  padding: 15px;
+  padding: 60px;
   background: #fff;
   border: 1px solid #e6e6e6;
   font-weight: 400;
@@ -656,7 +656,7 @@ header .navbar .dropdown-menu a {
 }
 
 .blog-entries .blog-entry h2 {
-  font-size: 18px;
+  font-size: 30px;
   line-height: 1.5;
 }
 

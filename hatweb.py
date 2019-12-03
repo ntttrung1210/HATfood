@@ -119,6 +119,7 @@ def pizza():
 def coffee():
     return render_template('coffee.html',data_doc=get_all_doc())
 
+
 @app.route('/bmi')
 def bmi():
     return render_template('bmi.html')
