@@ -79,5 +79,21 @@ def post2():
 def post3():
     return render_template('doc.html',data=get_all_content()[3],data_doc=get_all_doc())
 
+@app.route('/bmi')
+def bmi():
+    return render_template('bmi.html')
+
+@app.route('/bmi/thin')
+def index_thin():
+    return render_template('thin.html')
+
+@app.route('/bmi/normal')
+def index_normal():
+    return render_template('normal.html')
+
+@app.route('/bmi/fat')
+def index_fat():
+    return render_template('fat.html')
+
 if __name__ == '__main__':
     app.run(host='127.0.0.1', port=8000, debug=True)
