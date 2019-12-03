@@ -2,10 +2,9 @@ from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.common.action_chains import ActionChains
 import time
-ls=[]
 from hfdb import *
 browser=webdriver.Chrome()
-browser.get('https://www.now.vn/hai-phong/danh-sach-dia-diem-giao-tan-noi')
+browser.get('https://www.now.vn/ha-noi/danh-sach-dia-diem-giao-tan-noi?q=g%C3%A0%20t%E1%BA%A7n')
 time.sleep(2)
 for i in range(3):
     ele=browser.find_elements_by_xpath("//div[@class='item-restaurant']")
@@ -31,10 +30,10 @@ for i in range(3):
                 break
             else:
                 duong=address[i]+duong
-        ls.append({'name':name,'pic':pic,'address':address})
-        if check_food(address)==1:
+        # ls.append({'name':name,'pic':pic,'address':address})
+        if pic!='' and check_food(address)==1:
             insert_food(name,pic,address,duong,quan,tinh)
     ele1=browser.find_element_by_xpath("//span[@class='icon icon-paging-next']")
     ele1.click()
     time.sleep(2)
-# browser.close()
+browser.close()

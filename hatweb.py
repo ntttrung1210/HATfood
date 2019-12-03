@@ -1,13 +1,41 @@
 from flask import Flask, render_template, request, redirect, url_for, session
 from hfdb import*
+from datetime import date,datetime
 app = Flask(__name__)
 
 
-@app.route('/')
-def main_page():
-    b=len(get_all_food())
-    return render_template('index.html', data=get_all_food(),a=b,data_doc=get_all_doc())
+# @app.route('/')
+# def main_page():
+#     b=len(get_all_food())
+#     return render_template('index.html', data=get_all_food(),a=b,data_doc=get_all_doc())
 
+@app.route('/')
+def goi_y():
+    now=datetime.now()
+    ctime=int(now.strftime("%H"))
+    b=len(get_all_food())
+    if ctime<4 or ctime>=23:
+        c='Gợi ý ăn khuya'
+        return render_template('index.html', data1=get_khuya(),a=b,d=c,data_doc=get_all_doc(),data=get_all_food())
+    elif ctime<10:
+        c='Gợi ý ăn sáng'
+        return render_template('index.html', data1=get_sang(),a=b,d=c,data_doc=get_all_doc(),data=get_all_food())
+    elif ctime<15:
+        c='Gợi ý ăn trưa'
+        return render_template('index.html', data1=get_trua(),a=b,d=c,data_doc=get_all_doc(),data=get_all_food())
+    else:
+        c='Gợi ý ăn tối'
+        return render_template('index.html', data1=get_toi(),a=b,d=c,data_doc=get_all_doc(),data=get_all_food())
+
+@app.route('/2')
+def hot2():
+    b=len(get_all_food())
+    return render_template('hot2.html', data=get_all_food(),a=b,data_doc=get_all_doc())
+
+@app.route('/3')
+def hot3():
+    b=len(get_all_food())
+    return render_template('hot3.html', data=get_all_food(),a=b,data_doc=get_all_doc())
 
 @app.route('/trangmieng')
 def trangmieng():
@@ -69,15 +97,27 @@ def mipho():
 
 @app.route('/post1')
 def post1():
-    return render_template('doc.html',data=get_all_content()[1],data_doc=get_all_doc())
+    return render_template('post1.html',data_doc=get_all_doc())
 
 @app.route('/post2')
 def post2():
-    return render_template('doc.html',data=get_all_content()[2],data_doc=get_all_doc())
+    return render_template('post2.html',data_doc=get_all_doc())
 
 @app.route('/post3')
 def post3():
-    return render_template('doc.html',data=get_all_content()[3],data_doc=get_all_doc())
+    return render_template('post3.html',data_doc=get_all_doc())
+
+@app.route('/advice')
+def advice():
+    return render_template('advice.html',data_doc=get_all_doc())
+
+@app.route('/story_pizza')
+def pizza():
+    return render_template('pizza.html',data_doc=get_all_doc())
+
+@app.route('/coffee')
+def coffee():
+    return render_template('coffee.html',data_doc=get_all_doc())
 
 @app.route('/bmi')
 def bmi():
