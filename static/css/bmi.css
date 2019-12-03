@@ -1,8 +1,8 @@
 .border-general {
-    padding: 2.5em 0 1.5em 0;
+    padding: 4em 0 1.5em 0;
     padding-left: 25em;
     padding-right: 3.5em;
-    width: 50%;
+    width: 70%;
     font-size: 16px;
     font-family: 'Segoe UI';
 }
@@ -12,6 +12,7 @@
     border: 0;
     font-size: 100%;
     font: Arial;
+    color: black;
     vertical-align: baseline;
 }
 .box-input {
@@ -43,7 +44,7 @@
     text-align: center;
     text-decoration: none;
     white-space: nowrap;
-    width: 430px;
+    width: 400px;
 }
 .border-text {
     padding: 2.5em;

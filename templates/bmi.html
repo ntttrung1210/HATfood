@@ -103,14 +103,15 @@
 </head>
 <body>
   <div class="border-general">
-  <h2>TÍNH CHỈ SỐ BMI CỦA BẠN</h2>
+  <h2>CHỈ SỐ BMI CỦA BẠN</h2>
+  <br>
   <form name="bmiForm">
-    <h3 class="text-input">Your Weight (kg):</h3> <input class="box-input" type="text" name="weight" size="20"><br />
-    <h3 class="text-input">Your Height (m):</h3> <input class="box-input" type="text" name="height" size="20"><br/>
+    <h3 class="text-input">Cân nặng của bạn là (kg):</h3> <input class="box-input" type="text" name="weight" size="20"><br />
+    <h3 class="text-input">Chiều cao của bạn là (m):</h3> <input class="box-input" type="text" name="height" size="20"><br/>
     <input class="button-summit" type="button" value="Calculate BMI" onclick="calculateBmi()"><br/>
-    <br> <h3 class="text-input">Your BMI:</h3> 
+    <br> <h3 class="text-input">Chỉ số BMI của bạn là:</h3> 
     <input class="box-input" type="text" name="bmi" size="10"><br />
-    <h3 class="text-input">This Means:</h3> 
+    <h3 class="text-input">Điều đó có nghĩa là:</h3> 
     <input class="box-input" type="text" name="meaning" size="25"><br />
     <input class="button-summit" type="reset" value="Reset"/>
   </form>
@@ -124,7 +125,7 @@
     var weight = document.bmiForm.weight.value
     var height = document.bmiForm.height.value
     if( ((weight > 0) && (weight < 250)) &&
-        ((height > 0) && (height < 250)) ){	
+        ((height > 0) && (height < 2.5)) ){	
       var finalBmi = weight/(height*height)
       document.bmiForm.bmi.value = finalBmi
       if(finalBmi < 18.5){
@@ -166,7 +167,8 @@
    
   </script>
 
-
+<br>
+<br>
 
 <div class="sidebar-box">
     <div class="bio text-center">
