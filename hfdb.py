@@ -66,7 +66,7 @@ def search_by_addr(tinh, quan, duong):
     ls = []
     ls_food = get_all_food()
     for i in range(len(ls_food)):
-        if ls_food[i]['tinh'] == tinh and ls_food[i]['quan'] == quan and ls_food[i]['duong'] == duong:
+        if ls_food[i]['tinh'] == tinh and ls_food[i]['quan'] == quan and ls_food[i]['duong'] == duong and check_name(ls,ls_food[i]['name'])==1:
             ls.append(ls_food[i])
     return ls
 def check_name(ls,name):

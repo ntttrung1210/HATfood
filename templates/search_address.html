@@ -98,36 +98,29 @@
     </header>
     <!-- END header -->
 
-  <title>Chế độ dinh dưỡng cho người gầy </title>
+  <title>Document</title>
   <link rel="stylesheet" type="text/css" href="../static/css/bmi.css">
 </head>
-
-
 <body>
-    <div class="border-text">
-    <h2 style="color:bisque">Chế độ dinh dưỡng cho người béo phì </h2>
-    <br>
-    <p> Việc thừa cân quá nhiều có thể gây ra nhiều vấn đề về sức khỏe, đặc biệt là các bệnh về ung thư, máu, đường ruột,… Để giúp cơ thể thon gọn trở lại, các bạn cần tuân thủ những yêu cầu sau:
-    </p>
-    <ul type="disc">
-        <li>Hạn chế tối đa lượng tinh bột, các chất béo no,… có trong thực phẩm ăn hằng ngày. </li>
-        <li>Ăn nhiều hoa quả, đặc biệt là các thực phẩm có múi như cam, quýt, chanh,… vì những loại quả này giúp tăng tốc độ hấp thụ của cơ thể. Các thực phẩm chứa nhiều protein được khuyến khích ăn là cá, thịt gà trắng, sữa tách kem,… </li>
-        <li>Uống nhiều nước, có thể dùng thêm trà xanh vì trong trà chứa nhiều chất chống oxy hóa, vitamin E. Trà xanh có tác dụng đốt cháy mỡ thừa, thanh lọc cơ thể và phòng chống bệnh tật. </li>
-        <br>
-        Ngoài ra, để có thực đơn giảm béo hiệu quả, bạn cần thực hiện một lịch ăn uống sinh hoạt lành mạnh và điều độ. Bạn có thể chia thành nhiều bữa nhỏ trong ngày, 4-5 bữa để dạ dày không bao giờ bị rỗng, không có cảm giác đói hoặc thèm ăn. Bên cạnh đó là một chế độ tập luyện hợp lý để cơ thể săn chắc khỏe mạnh, tránh sự trùng cơ, nhão cơ nếu chỉ áp dụng ăn kiêng. Bạn có thể tập gym, yoga, dance, body jam, kickboxing hoặc bất cứ hình thức vận động nào để đốt cháy calories.
-    <br>
-    <br>
-    </ul>
-    </div>
-   
-    
-
-   
-
-
-
-
-    
+  <div class="border-general">
+  <h2>Tìm kiếm theo địa chỉ</h2>
+  <br>
+  <!-- <form method="POST">
+    <h3 class="text-input">Nhập tỉnh thành:</h3> <input class="box-input" type="text" name="tinh" size="20"><br />
+    <h3 class="text-input">Nhập quận/huyện:</h3> <input class="box-input" type="text" name="quan" size="20"><br/>
+    <h3 class="text-input">Nhập đường:</h3> <input class="box-input" type="text" name="duong" size="20"><br/>
+    <input class="button-summit" type="submit"  name="Submit">
+  </form> -->
+  <!-- <br> -->
+  <!-- <button class="button-summit" name="advice" value="OK" type="button" onclick="advice()">Lời khuyên cho bạn</button>  -->
+  <form action="/search_values" class="search-top-form" method="POST">
+    <h3 class="text-input">Nhập tỉnh thành:</h3> <input class="box-input" type="text" name="tinh" size="20"><br />
+    <h3 class="text-input">Nhập quận/huyện:</h3> <input class="box-input" type="text" name="quan" size="20"><br/>
+    <h3 class="text-input">Nhập đường:</h3> <input class="box-input" type="text" name="duong" size="20"><br/>
+    <input class="button-summit" type="submit"  name="Submit">
+  </form>
+  </div>
+ 
 
 <div class="sidebar-box">
     <div class="bio text-center">
