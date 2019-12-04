@@ -101,6 +101,9 @@ def search_by_key(food):
     ls = []
     ls_f = get_all_food()
     ls_f1= get_all_food()
+    food=food.lower()
+    for i in range(len(ls_f)):
+        ls_f[i]['name']=ls_f[i]['name'].lower()
     for i in range(len(ls_f)):
         if ls_f[i]['name'].find(food)!=-1 and check_name(ls,ls_f1[i]['name'])==1:
             ls.append(ls_f1[i])
