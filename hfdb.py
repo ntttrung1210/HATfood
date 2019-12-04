@@ -61,14 +61,6 @@ def get_viahe():
 def get_mipho():
     return list(db.mipho.find())
 
-
-def search_by_addr(tinh, quan, duong):
-    ls = []
-    ls_food = get_all_food()
-    for i in range(len(ls_food)):
-        if ls_food[i]['tinh'] == tinh and ls_food[i]['quan'] == quan and ls_food[i]['duong'] == duong and check_name(ls,ls_food[i]['name'])==1:
-            ls.append(ls_food[i])
-    return ls
 def check_name(ls,name):
     dk=1
     for i in range(len(ls)):
@@ -88,6 +80,22 @@ def remove_accents(input_str):
 		else:
 			s += c
 	return s
+
+def search_by_addr(tinh, quan, duong):
+    ls = []
+    tinh=remove_accents(tinh).lower()
+    quan=remove_accents(quan).lower()
+    duong=remove_accents(duong).lower()
+    ls_food = get_all_food()
+    ls_f=get_all_food()
+    for i in range(len(ls_food)):
+        ls_food[i]['duong']=remove_accents(ls_food[i]['duong']).lower()
+        ls_food[i]['quan']=remove_accents(ls_food[i]['quan']).lower()
+        ls_food[i]['tinh']=remove_accents(ls_food[i]['tinh']).lower()
+    for i in range(len(ls_food)):
+        if ls_food[i]['tinh'] == tinh and ls_food[i]['quan'] == quan and ls_food[i]['duong'] == duong and check_name(ls,ls_f[i]['name'])==1:
+            ls.append(ls_f[i])
+    return ls
 
 def search_by_key(food):
     ls = []
