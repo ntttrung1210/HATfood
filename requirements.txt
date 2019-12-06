@@ -9,7 +9,7 @@ flask-socketio
 # Database
 # ----------------------
 mongoengine
-pymongo
+pymongo--2.8
 
 # ----------------------
 # Production Server
