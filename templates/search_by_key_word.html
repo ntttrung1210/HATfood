@@ -96,19 +96,22 @@
         </div
       </nav>
     </header>
-    <!-- END header -->
     <br> <br>
-    <div class="col-3 search-top">
-      <!-- <a href="/search/food"><span class="fa fa-search"></span></a> -->
-      <form action="/search_by_key_word" class="search-top-form" method="POST">
-        <span class="icon"><i class="fa fa-search"></i></span>
-        <input type="search" id="search" placeholder="Search..." / name="key_word">
-        <!-- <button type="button" class="btn btn-search">
-          <span class="icon icon-search"></span>
-        </button> -->
-      </form>
-    </div>
+    <div class="search-container " style="margin: 0px auto; width: 30%;">
 
+        <!-- <a href="/search/food"><span class="fa fa-search"></span></a> -->
+        <form class="search-top" action="/search_by_key_word" class="search-top-form" method="POST" style="
+        position: relative;">
+          
+          <input type="search" id="search" placeholder="Search..." name="key_word" style="
+          width: 100%;">
+          <span class="icon" style="right: 12px;"><i class="fa fa-search"></i></span> 
+          <!-- <button type="button" class="btn btn-search">
+            <span class="icon icon-search"></span>
+          </button> -->
+        </form>
+
+    </div>
 
 <br><br>
     <section class="site-section py-sm">
