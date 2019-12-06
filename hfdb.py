@@ -7,12 +7,13 @@ client = pymongo.MongoClient(
 db = client.NTTRUNG
 
 
-def insert_food(name, pic, address, duong, quan, tinh):
+def insert_food(name, pic, address, duong, quan, tinh,link):
     db.hatfood.insert_one({'name': name, 'pic': pic, 'address': address,
-                           'duong': duong, 'quan': quan, 'tinh': tinh})
+                           'duong': duong, 'quan': quan, 'tinh': tinh,'link':link})
 
-def insert_doc(name,pic,link):
-    db.document.insert_one({'name':name,'pic':pic,'link':link})
+def insert_doc(name, pic, address, duong, quan, tinh,link):
+    db.document.insert_one({'name': name, 'pic': pic, 'address': address,
+                           'duong': duong, 'quan': quan, 'tinh': tinh,'link':link})
 
 def insert_content(content):
     db.content.insert_one({'content':content})
@@ -148,41 +149,51 @@ def check_food(ad):
     return kt
 
 
-def insert_trangmieng(name, pic, address):
-    db.trangmieng.insert_one({'name': name, 'pic': pic, 'address': address})
+def insert_trangmieng(name, pic, address, duong, quan, tinh,link):
+    db.trangmieng.insert_one({'name': name, 'pic': pic, 'address': address,
+                           'duong': duong, 'quan': quan, 'tinh': tinh,'link':link})
 
 
-def insert_doan(name, pic, address):
-    db.doan.insert_one({'name': name, 'pic': pic, 'address': address})
+def insert_doan(name, pic, address, duong, quan, tinh,link):
+    db.doan.insert_one({'name': name, 'pic': pic, 'address': address,
+                           'duong': duong, 'quan': quan, 'tinh': tinh,'link':link})
 
 
-def insert_monlau(name, pic, address):
-    db.monlau.insert_one({'name': name, 'pic': pic, 'address': address})
+def insert_monlau(name, pic, address, duong, quan, tinh,link):
+    db.monlau.insert_one({'name': name, 'pic': pic, 'address': address,
+                           'duong': duong, 'quan': quan, 'tinh': tinh,'link':link})
 
 
-def insert_viahe(name, pic, address):
-    db.viahe.insert_one({'name': name, 'pic': pic, 'address': address})
+def insert_viahe(name, pic, address, duong, quan, tinh,link):
+    db.viahe.insert_one({'name': name, 'pic': pic, 'address': address,
+                           'duong': duong, 'quan': quan, 'tinh': tinh,'link':link})
 
 
-def insert_mipho(name, pic, address):
-    db.mipho.insert_one({'name': name, 'pic': pic, 'address': address})
+def insert_mipho(name, pic, address, duong, quan, tinh,link):
+    db.mipho.insert_one({'name': name, 'pic': pic, 'address': address,
+                           'duong': duong, 'quan': quan, 'tinh': tinh,'link':link})
 
 
-def insert_sang(name, pic, address):
-    db.sang.insert_one({'name': name, 'pic': pic, 'address': address})
+def insert_sang(name, pic, address, duong, quan, tinh,link):
+    db.sang.insert_one({'name': name, 'pic': pic, 'address': address,
+                           'duong': duong, 'quan': quan, 'tinh': tinh,'link':link})
 
-def insert_khuya(name, pic, address):
-    db.khuya.insert_one({'name': name, 'pic': pic, 'address': address})
-
-
-def insert_trua(name, pic, address):
-    db.trua.insert_one({'name': name, 'pic': pic, 'address': address})
+def insert_khuya(name, pic, address, duong, quan, tinh,link):
+    db.khuya.insert_one({'name': name, 'pic': pic, 'address': address,
+                           'duong': duong, 'quan': quan, 'tinh': tinh,'link':link})
 
 
+def insert_trua(name, pic, address, duong, quan, tinh,link):
+    db.trua.insert_one({'name': name, 'pic': pic, 'address': address,
+                           'duong': duong, 'quan': quan, 'tinh': tinh,'link':link})
 
-def insert_toi(name, pic, address):
-    db.toi.insert_one({'name': name, 'pic': pic, 'address': address})
 
-def insert_hot(name, pic, address):
-    db.hot.insert_one({'name': name, 'pic': pic, 'address': address})
+
+def insert_toi(name, pic, address, duong, quan, tinh,link):
+    db.toi.insert_one({'name': name, 'pic': pic, 'address': address,
+                           'duong': duong, 'quan': quan, 'tinh': tinh,'link':link})
+
+def insert_hot(name, pic, address, duong, quan, tinh,link):
+    db.hot.insert_one({'name': name, 'pic': pic, 'address': address,
+                           'duong': duong, 'quan': quan, 'tinh': tinh,'link':link})
 

@@ -4,10 +4,10 @@ from selenium.webdriver.common.action_chains import ActionChains
 import time
 from hfdb import *
 browser=webdriver.Chrome()
-browser.get('https://www.now.vn/ha-noi/danh-sach-dia-diem-giao-tan-noi?q=Nguy%E1%BB%85n%20Xi%E1%BB%83n')
+browser.get('https://www.now.vn/ha-noi/danh-sach-dia-diem-phuc-vu-banh-kem-giao-tan-noi')
 time.sleep(2)
 ls=[]
-for i in range(2):
+for i in range(3):
     ele=browser.find_elements_by_xpath("//div[@class='item-restaurant']")
     for v in ele:
         name=v.find_element_by_xpath(".//h4[@class='name-res']").text
@@ -34,7 +34,7 @@ for i in range(2):
                 duong=address[i]+duong
         # ls.append({'name':name,'pic':pic,'address':address})
         if pic!='' and check_food(address)==1:
-            insert_food(name,pic,address,duong,quan,tinh,link)
+             insert_food(name,pic,address,duong,quan,tinh,link)
             # ls.append({'duong':duong,'name':name,'link':link})
     ele1=browser.find_element_by_xpath("//span[@class='icon icon-paging-next']")
     ele1.click()
