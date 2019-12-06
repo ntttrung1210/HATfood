@@ -4,7 +4,8 @@
     padding-right: 3.5em;
     width: 70%;
     font-size: 16px;
-    font-family: 'Segoe UI';
+    font-family: Tahoma;
+    text-align: justify;
 }
 .text-input {
     margin: 0;
@@ -53,7 +54,7 @@
     width: 100%;
     float: left;
     font-size: 16px;
-    font-family: 'Segoe UI';
+    font-family:Tahoma;
 }
 .border-text2 {
     padding: 1em 1em 1.5em 0;
