@@ -1,11 +1,9 @@
 .border-general {
-    padding: 4em 0 1.5em 0;
-    padding-left: 25em;
-    padding-right: 3.5em;
-    width: 70%;
+    width: 400px;
     font-size: 16px;
     font-family: Tahoma;
     text-align: justify;
+    margin: 20px auto;
 }
 .text-input {
     margin: 0;
