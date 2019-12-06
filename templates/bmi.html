@@ -127,7 +127,7 @@
     if( ((weight > 0) && (weight < 250)) &&
         ((height > 0) && (height < 2.5)) ){	
       var finalBmi = weight/(height*height)
-      document.bmiForm.bmi.value = Math.round(finalBmi)
+      document.bmiForm.bmi.value = Math.round(finalBmi * 100) / 100
       if(finalBmi < 18.5){
       document.bmiForm.meaning.value = "Bạn quá gầy."
       }
@@ -149,7 +149,7 @@
     if( ((weight > 0) && (weight < 250)) &&
         ((height > 0) && (height < 250)) ){	
       var finalBmi = weight/(height*height)
-      document.bmiForm.bmi.value = Math.round(finalBmi)
+      document.bmiForm.bmi.value = Math.round(finalBmi * 100) / 100
       if(finalBmi < 18.5){
       document.bmiForm.advice.value = location.assign('/bmi/thin')
       }
