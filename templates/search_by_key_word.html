@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en">
   <head>
-      <title>HATfood&mdash; Good for health!</title>
+    <title>HATfood Good for health! &mdash; Minimal Blog Template</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -99,7 +99,6 @@
     <!-- END header -->
     <br> <br>
     <div class="col-3 search-top">
-      <div id="wrapper">
       <!-- <a href="/search/food"><span class="fa fa-search"></span></a> -->
       <form action="/search_by_key_word" class="search-top-form" method="POST">
         <span class="icon"><i class="fa fa-search"></i></span>
@@ -108,7 +107,6 @@
           <span class="icon icon-search"></span>
         </button> -->
       </form>
-      </div>
     </div>
 
 
@@ -123,7 +121,7 @@
         <div class="row blog-entries">
           <div class="main-content">
             <div class="row">
-            {% for v in range(20) %}
+            {% for v in range(b) %}
               <div class="col-md-4">
                 <a href="../templates/blog-single.html" class="blog-entry element-animate" data-animate-effect="fadeIn">
                   <img src={{data[v].pic}} alt="Image placeholder">

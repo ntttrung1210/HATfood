@@ -4,7 +4,7 @@ from selenium.webdriver.common.action_chains import ActionChains
 import time
 from hfdb import *
 browser=webdriver.Chrome()
-browser.get('https://www.now.vn/ha-noi/danh-sach-dia-diem-giao-tan-noi?q=qu%E1%BA%ADn%20H%C3%A0%20%C4%90%C3%B4ng')
+browser.get('https://www.now.vn/ha-noi/danh-sach-dia-diem-giao-tan-noi?q=c%C6%A1m%20ni%C3%AAu')
 time.sleep(2)
 for i in range(3):
     ele=browser.find_elements_by_xpath("//div[@class='item-restaurant']")
