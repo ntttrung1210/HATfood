@@ -47,10 +47,10 @@
     width: 400px;
 }
 .border-text {
-    padding: 2.5em;
+    padding: 4em 20em;
     /* padding-left: 5em;
     padding-right: 35em; */
-    width: 600px;
+    width: 100%;
     float: left;
     font-size: 16px;
     font-family: 'Segoe UI';
@@ -83,15 +83,3 @@
     font-size: 16px;
     font-family: 'Segoe UI';
     }
-© 2019 GitHub, Inc.
-Terms
-Privacy
-Security
-Status
-Help
-Contact GitHub
-Pricing
-API
-Training
-Blog
-About
