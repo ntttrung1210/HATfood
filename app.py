@@ -162,4 +162,7 @@ def search_by_key_word():
     return render_template('search_by_key_word.html',data_doc=get_all_doc(),data=ls,b=a)
 
 if __name__ == '__main__':
-    app.run(host='127.0.0.1', port=8000, debug=True)
+    # dev
+    # app.run(host='127.0.0.1', port=8000, debug=True)
+    # deploy
+    app.run(debug=False)
