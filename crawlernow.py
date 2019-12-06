@@ -6,11 +6,13 @@ from hfdb import *
 browser=webdriver.Chrome()
 browser.get('https://www.now.vn/ha-noi/danh-sach-dia-diem-giao-tan-noi?q=Nguy%E1%BB%85n%20Xi%E1%BB%83n')
 time.sleep(2)
+ls=[]
 for i in range(2):
     ele=browser.find_elements_by_xpath("//div[@class='item-restaurant']")
     for v in ele:
         name=v.find_element_by_xpath(".//h4[@class='name-res']").text
         address=v.find_element_by_xpath(".//div[@class='address-res']").text
+        link=v.find_element_by_xpath(".//a[1]").get_attribute('href')
         pic=v.find_element_by_xpath(".//a[1]//div[1]//img[1]").get_attribute('src')
         quan=''
         duong=''
@@ -32,7 +34,8 @@ for i in range(2):
                 duong=address[i]+duong
         # ls.append({'name':name,'pic':pic,'address':address})
         if pic!='' and check_food(address)==1:
-            insert_food(name,pic,address,duong,quan,tinh)
+            insert_food(name,pic,address,duong,quan,tinh,link)
+            # ls.append({'duong':duong,'name':name,'link':link})
     ele1=browser.find_element_by_xpath("//span[@class='icon icon-paging-next']")
     ele1.click()
     time.sleep(2)
