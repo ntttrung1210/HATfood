@@ -32,6 +32,19 @@ def hot2():
     b=len(get_all_food())
     return render_template('hot2.html', data=get_all_food(),a=b,data_doc=get_all_doc())
 
+@app.route('/search_address')
+def sear_address1():
+    return render_template("search_address.html")
+
+@app.route('/search_values', methods=['POST'])
+def sear_address():
+    duong=request.form.get("duong")
+    quan=request.form.get("quan")
+    tinh=request.form.get("tinh")
+    ls=search_by_addr(tinh,quan,duong)
+    a=len(ls)
+    return render_template('search.html', data=ls, b=a,data_doc=get_all_doc())
+
 @app.route('/3')
 def hot3():
     b=len(get_all_food())
