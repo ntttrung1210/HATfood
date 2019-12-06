@@ -154,5 +154,12 @@ def search_by_food():
     ls=get_hot()
     return render_template('search_by_food.html',data=ls,data_doc=get_all_doc())
 
+@app.route('/search_by_key_word',methods=['POST'])
+def search_by_key_word():
+    key_word = request.form.get("key_word")
+    ls = search_by_key(key_word)
+    a = len(ls)
+    return render_template('search_by_key_word.html',data_doc=get_all_doc(),data=ls,b=a)
+
 if __name__ == '__main__':
     app.run(host='127.0.0.1', port=8000, debug=True)
